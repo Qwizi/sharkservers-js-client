@@ -1,6 +1,6 @@
-import {ApiClient} from "./client";
+import {ApiClient} from "./src/client";
 
-export *  from "./client"
+export *  from "./src/client"
 
 const SharkServersClient = new ApiClient({
     BASE: "http://localhost",

@@ -15,8 +15,8 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SharkServersClient = void 0;
-const client_1 = require("./client");
-__exportStar(require("./client"), exports);
+const client_1 = require("./src/client");
+__exportStar(require("./src/client"), exports);
 const SharkServersClient = new client_1.ApiClient({
     BASE: "http://localhost",
 });
