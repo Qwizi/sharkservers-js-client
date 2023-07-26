@@ -17,3 +17,29 @@ To use the SharkServers SDK in your project, you can either download the source 
 
 ```bash
 npm install sharkservers-sdk --save
+```
+## Usage
+```js
+import {SharkServersClient as shark_api} from "sharkservers-sdk";
+
+// Register user
+
+const new_user = await shark_api.auth.register({
+    username: "TestUser",
+    password: "testpassword123",
+    password2: "testpassword123",
+    email: "test@website.pl"
+})
+
+// Get user access token and refresh token
+const user = await shark_api.auth.loginUser({
+    username: "TestUser",
+    password: "testpassword123"
+})
+
+// Get user info
+shark_api.request.TOKEN = user.access_token
+
+const user_info = await shark_api.users.getLoggedUser()
+console.log(user_info)
+```
