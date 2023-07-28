@@ -7,11 +7,11 @@ import type { ChangePasswordSchema } from '../models/ChangePasswordSchema';
 import type { ChangeUsernameSchema } from '../models/ChangeUsernameSchema';
 import type { CreateAppSchema } from '../models/CreateAppSchema';
 import type { Page_StaffRolesSchema_ } from '../models/Page_StaffRolesSchema_';
-import type { Page_User_HSN_ } from '../models/Page_User_HSN_';
+import type { Page_User_JQQ_ } from '../models/Page_User_JQQ_';
 import type { Page_UserOut2Schema_ } from '../models/Page_UserOut2Schema_';
 import type { SuccessChangeUsernameSchema } from '../models/SuccessChangeUsernameSchema';
-import type { User_HSN } from '../models/User_HSN';
-import type { User_MST } from '../models/User_MST';
+import type { User_JQQ } from '../models/User_JQQ';
+import type { User_ZJK } from '../models/User_ZJK';
 
 import type { CancelablePromise } from '../core/CancelablePromise';
 import type { BaseHttpRequest } from '../core/BaseHttpRequest';
@@ -81,10 +81,10 @@ export class UsersService {
      * Get logged user
      * :param user:
      * :return UserOutWithEmail:
-     * @returns User_MST Successful Response
+     * @returns User_ZJK Successful Response
      * @throws ApiError
      */
-    public getLoggedUser(): CancelablePromise<User_MST> {
+    public getLoggedUser(): CancelablePromise<User_ZJK> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/users/me',
@@ -285,13 +285,13 @@ export class UsersService {
      * :return Page[UserOut]:
      * @param page
      * @param size
-     * @returns Page_User_HSN_ Successful Response
+     * @returns Page_User_JQQ_ Successful Response
      * @throws ApiError
      */
     public getLastLoggedUsers(
         page: number = 1,
         size: number = 50,
-    ): CancelablePromise<Page_User_HSN_> {
+    ): CancelablePromise<Page_User_JQQ_> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/users/online',
@@ -311,12 +311,12 @@ export class UsersService {
      * :param user:
      * :return UserOut:
      * @param userId
-     * @returns User_HSN Successful Response
+     * @returns User_JQQ Successful Response
      * @throws ApiError
      */
     public getUser(
         userId: number,
-    ): CancelablePromise<User_HSN> {
+    ): CancelablePromise<User_JQQ> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/users/{user_id}',

@@ -2,8 +2,8 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-import type { Page_Role_SNP_ } from '../models/Page_Role_SNP_';
-import type { Role_YFM } from '../models/Role_YFM';
+import type { Page_Role_DKD_ } from '../models/Page_Role_DKD_';
+import type { Role_PJU } from '../models/Role_PJU';
 
 import type { CancelablePromise } from '../core/CancelablePromise';
 import type { BaseHttpRequest } from '../core/BaseHttpRequest';
@@ -20,13 +20,13 @@ export class RolesService {
      * :return AbstractPage:
      * @param page
      * @param size
-     * @returns Page_Role_SNP_ Successful Response
+     * @returns Page_Role_DKD_ Successful Response
      * @throws ApiError
      */
     public getRoles(
         page: number = 1,
         size: number = 50,
-    ): CancelablePromise<Page_Role_SNP_> {
+    ): CancelablePromise<Page_Role_DKD_> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/roles',
@@ -46,12 +46,12 @@ export class RolesService {
      * :param role:
      * :return:
      * @param roleId
-     * @returns Role_YFM Successful Response
+     * @returns Role_PJU Successful Response
      * @throws ApiError
      */
     public getRole(
         roleId: number,
-    ): CancelablePromise<Role_YFM> {
+    ): CancelablePromise<Role_PJU> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/roles/{role_id}',

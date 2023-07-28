@@ -3,9 +3,10 @@
 /* tslint:disable */
 /* eslint-disable */
 
+import type { TokenDetailsSchema } from './TokenDetailsSchema';
+
 export type TokenSchema = {
-    access_token: string;
-    refresh_token: string;
-    token_type: string;
+    access_token: TokenDetailsSchema;
+    refresh_token: TokenDetailsSchema;
 };
 

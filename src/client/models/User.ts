@@ -3,7 +3,7 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { PkOnlyRolebzmztn } from './PkOnlyRolebzmztn';
+import type { PkOnlyRolekhwbad } from './PkOnlyRolekhwbad';
 import type { Role } from './Role';
 
 /**
@@ -18,7 +18,7 @@ export type User = {
     is_superuser?: boolean;
     avatar?: string;
     roles?: (number | Role | Array<Role>);
-    display_role?: (number | Role | PkOnlyRolebzmztn);
+    display_role?: (number | Role | PkOnlyRolekhwbad);
     last_login?: string;
     last_online?: string;
     secret_salt: string;

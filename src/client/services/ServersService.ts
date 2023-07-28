@@ -3,7 +3,7 @@
 /* tslint:disable */
 /* eslint-disable */
 import type { CreatePlayerChatColorSchema } from '../models/CreatePlayerChatColorSchema';
-import type { Server_SHR } from '../models/Server_SHR';
+import type { Server_HWV } from '../models/Server_HWV';
 import type { UpdatePlayerChatColorSchema } from '../models/UpdatePlayerChatColorSchema';
 import type { UpdatePlayerStatsSchema } from '../models/UpdatePlayerStatsSchema';
 
@@ -67,12 +67,12 @@ export class ServersService {
      * :param server_id:
      * :return:
      * @param serverId
-     * @returns Server_SHR Successful Response
+     * @returns Server_HWV Successful Response
      * @throws ApiError
      */
     public getServer(
         serverId: number,
-    ): CancelablePromise<Server_SHR> {
+    ): CancelablePromise<Server_HWV> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/servers/{server_id}',

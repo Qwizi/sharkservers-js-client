@@ -3,7 +3,7 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { PkOnlyUserbrtjmq } from './PkOnlyUserbrtjmq';
+import type { PkOnlyUserevxkmw } from './PkOnlyUserevxkmw';
 import type { User } from './User';
 
 /**
@@ -11,7 +11,7 @@ import type { User } from './User';
  */
 export type Like = {
     id?: number;
-    user?: (number | User | PkOnlyUserbrtjmq);
+    user?: (number | User | PkOnlyUserevxkmw);
     created_date?: string;
     updated_date?: string;
 };

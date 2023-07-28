@@ -9,7 +9,7 @@ import type { RefreshTokenSchema } from '../models/RefreshTokenSchema';
 import type { RegisterUserSchema } from '../models/RegisterUserSchema';
 import type { ResendActivationCodeSchema } from '../models/ResendActivationCodeSchema';
 import type { TokenSchema } from '../models/TokenSchema';
-import type { User_HSN } from '../models/User_HSN';
+import type { User_JQQ } from '../models/User_JQQ';
 import type { UserActivatedSchema } from '../models/UserActivatedSchema';
 
 import type { CancelablePromise } from '../core/CancelablePromise';
@@ -27,12 +27,12 @@ export class AuthService {
      * :param redis:
      * :return UserOut:
      * @param requestBody
-     * @returns User_HSN Successful Response
+     * @returns User_JQQ Successful Response
      * @throws ApiError
      */
     public register(
         requestBody: RegisterUserSchema,
-    ): CancelablePromise<User_HSN> {
+    ): CancelablePromise<User_JQQ> {
         return this.httpRequest.request({
             method: 'POST',
             url: '/v1/auth/register',
@@ -102,10 +102,10 @@ export class AuthService {
      * :param auth_service:
      * :param user:
      * :return:
-     * @returns User_HSN Successful Response
+     * @returns User_JQQ Successful Response
      * @throws ApiError
      */
-    public logoutUser(): CancelablePromise<User_HSN> {
+    public logoutUser(): CancelablePromise<User_JQQ> {
         return this.httpRequest.request({
             method: 'POST',
             url: '/v1/auth/logout',

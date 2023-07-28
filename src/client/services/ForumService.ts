@@ -2,15 +2,15 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-import type { Category_QGE } from '../models/Category_QGE';
+import type { Category_LYU } from '../models/Category_LYU';
 import type { CreatePostSchema } from '../models/CreatePostSchema';
 import type { CreateThreadSchema } from '../models/CreateThreadSchema';
-import type { Page_Category_QGE_ } from '../models/Page_Category_QGE_';
+import type { Page_Category_LYU_ } from '../models/Page_Category_LYU_';
 import type { Page_PostOut_ } from '../models/Page_PostOut_';
 import type { Page_ThreadOut_ } from '../models/Page_ThreadOut_';
 import type { Post } from '../models/Post';
 import type { PostOut } from '../models/PostOut';
-import type { Thread_SNI } from '../models/Thread_SNI';
+import type { Thread_ALL } from '../models/Thread_ALL';
 import type { ThreadOut } from '../models/ThreadOut';
 import type { UpdatePostSchema } from '../models/UpdatePostSchema';
 import type { UpdateThreadSchema } from '../models/UpdateThreadSchema';
@@ -30,13 +30,13 @@ export class ForumService {
      * :return:
      * @param page
      * @param size
-     * @returns Page_Category_QGE_ Successful Response
+     * @returns Page_Category_LYU_ Successful Response
      * @throws ApiError
      */
     public getCategories(
         page: number = 1,
         size: number = 50,
-    ): CancelablePromise<Page_Category_QGE_> {
+    ): CancelablePromise<Page_Category_LYU_> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/forum/categories',
@@ -56,12 +56,12 @@ export class ForumService {
      * :param category:
      * :return:
      * @param categoryId
-     * @returns Category_QGE Successful Response
+     * @returns Category_LYU Successful Response
      * @throws ApiError
      */
     public getCategory(
         categoryId: number,
-    ): CancelablePromise<Category_QGE> {
+    ): CancelablePromise<Category_LYU> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/forum/categories/{category_id}',
@@ -115,12 +115,12 @@ export class ForumService {
      * :param user:
      * :return:
      * @param requestBody
-     * @returns Thread_SNI Successful Response
+     * @returns Thread_ALL Successful Response
      * @throws ApiError
      */
     public createThread(
         requestBody: CreateThreadSchema,
-    ): CancelablePromise<Thread_SNI> {
+    ): CancelablePromise<Thread_ALL> {
         return this.httpRequest.request({
             method: 'POST',
             url: '/v1/forum/threads',

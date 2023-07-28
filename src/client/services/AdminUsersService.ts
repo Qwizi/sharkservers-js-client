@@ -5,8 +5,8 @@
 import type { AdminUpdateUserSchema } from '../models/AdminUpdateUserSchema';
 import type { BanUserSchema } from '../models/BanUserSchema';
 import type { CreateUserSchema } from '../models/CreateUserSchema';
-import type { Page_User_MST_ } from '../models/Page_User_MST_';
-import type { User_MST } from '../models/User_MST';
+import type { Page_User_ZJK_ } from '../models/Page_User_ZJK_';
+import type { User_ZJK } from '../models/User_ZJK';
 
 import type { CancelablePromise } from '../core/CancelablePromise';
 import type { BaseHttpRequest } from '../core/BaseHttpRequest';
@@ -24,13 +24,13 @@ export class AdminUsersService {
      * :return Page[UserOutWithEmail]:
      * @param page
      * @param size
-     * @returns Page_User_MST_ Successful Response
+     * @returns Page_User_ZJK_ Successful Response
      * @throws ApiError
      */
     public adminGetUsers(
         page: number = 1,
         size: number = 50,
-    ): CancelablePromise<Page_User_MST_> {
+    ): CancelablePromise<Page_User_ZJK_> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/admin/users',
@@ -51,12 +51,12 @@ export class AdminUsersService {
      * :param user:
      * :return UserOutWithEmail:
      * @param requestBody
-     * @returns User_MST Successful Response
+     * @returns User_ZJK Successful Response
      * @throws ApiError
      */
     public adminCreateUser(
         requestBody: CreateUserSchema,
-    ): CancelablePromise<User_MST> {
+    ): CancelablePromise<User_ZJK> {
         return this.httpRequest.request({
             method: 'POST',
             url: '/v1/admin/users',
@@ -75,12 +75,12 @@ export class AdminUsersService {
      * :param user:
      * :return UserOutWithEmail:
      * @param userId
-     * @returns User_MST Successful Response
+     * @returns User_ZJK Successful Response
      * @throws ApiError
      */
     public adminGetUser(
         userId: number,
-    ): CancelablePromise<User_MST> {
+    ): CancelablePromise<User_ZJK> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/admin/users/{user_id}',
@@ -97,13 +97,13 @@ export class AdminUsersService {
      * Admin Update User
      * @param userId
      * @param requestBody
-     * @returns User_MST Successful Response
+     * @returns User_ZJK Successful Response
      * @throws ApiError
      */
     public adminUpdateUser(
         userId: number,
         requestBody: AdminUpdateUserSchema,
-    ): CancelablePromise<User_MST> {
+    ): CancelablePromise<User_ZJK> {
         return this.httpRequest.request({
             method: 'PUT',
             url: '/v1/admin/users/{user_id}',

@@ -3,9 +3,9 @@
 /* tslint:disable */
 /* eslint-disable */
 import type { CreateRoleSchema } from '../models/CreateRoleSchema';
-import type { Page_Role_SNP_ } from '../models/Page_Role_SNP_';
-import type { Role_SNP } from '../models/Role_SNP';
-import type { Role_YFM } from '../models/Role_YFM';
+import type { Page_Role_DKD_ } from '../models/Page_Role_DKD_';
+import type { Role_DKD } from '../models/Role_DKD';
+import type { Role_PJU } from '../models/Role_PJU';
 import type { UpdateRoleSchema } from '../models/UpdateRoleSchema';
 
 import type { CancelablePromise } from '../core/CancelablePromise';
@@ -24,13 +24,13 @@ export class AdminRolesService {
      * :return AbstractPag[RoleOut]:
      * @param page
      * @param size
-     * @returns Page_Role_SNP_ Successful Response
+     * @returns Page_Role_DKD_ Successful Response
      * @throws ApiError
      */
     public adminGetRoles(
         page: number = 1,
         size: number = 50,
-    ): CancelablePromise<Page_Role_SNP_> {
+    ): CancelablePromise<Page_Role_DKD_> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/admin/roles',
@@ -53,12 +53,12 @@ export class AdminRolesService {
      * :param scopes_service:
      * :return:
      * @param requestBody
-     * @returns Role_YFM Successful Response
+     * @returns Role_PJU Successful Response
      * @throws ApiError
      */
     public adminCreateRole(
         requestBody: CreateRoleSchema,
-    ): CancelablePromise<Role_YFM> {
+    ): CancelablePromise<Role_PJU> {
         return this.httpRequest.request({
             method: 'POST',
             url: '/v1/admin/roles',
@@ -78,12 +78,12 @@ export class AdminRolesService {
      * :param user:
      * :return:
      * @param roleId
-     * @returns Role_YFM Successful Response
+     * @returns Role_PJU Successful Response
      * @throws ApiError
      */
     public adminGetRole(
         roleId: number,
-    ): CancelablePromise<Role_YFM> {
+    ): CancelablePromise<Role_PJU> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/admin/roles/{role_id}',
@@ -156,13 +156,13 @@ export class AdminRolesService {
      * Admin Add Scopes To Role
      * @param roleId
      * @param requestBody
-     * @returns Role_SNP Successful Response
+     * @returns Role_DKD Successful Response
      * @throws ApiError
      */
     public adminAddScopesToRole(
         roleId: number,
         requestBody: Array<number>,
-    ): CancelablePromise<Role_SNP> {
+    ): CancelablePromise<Role_DKD> {
         return this.httpRequest.request({
             method: 'POST',
             url: '/v1/admin/roles/{role_id}/scopes/add',

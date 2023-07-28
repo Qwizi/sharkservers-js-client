@@ -4,7 +4,7 @@
 /* eslint-disable */
 
 import type { Like } from './Like';
-import type { PkOnlyUserbmiilz } from './PkOnlyUserbmiilz';
+import type { PkOnlyUserovdubl } from './PkOnlyUserovdubl';
 import type { User } from './User';
 
 /**
@@ -12,7 +12,7 @@ import type { User } from './User';
  */
 export type Post = {
     id?: number;
-    author?: (number | User | PkOnlyUserbmiilz);
+    author?: (number | User | PkOnlyUserovdubl);
     content: string;
     likes?: (number | Like | Array<Like>);
     created_date?: string;
