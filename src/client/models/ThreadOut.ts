@@ -3,17 +3,22 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { ThreadAuthor } from './ThreadAuthor';
-import type { ThreadCategory } from './ThreadCategory';
-import type { ThreadTag } from './ThreadTag';
+import type { Category_YET } from './Category_YET';
+import type { ThreadMeta_TLB } from './ThreadMeta_TLB';
+import type { User_RGC } from './User_RGC';
 
 export type ThreadOut = {
-    id: number;
+    created_at?: string;
+    updated_at?: string;
+    id?: number;
     title: string;
-    is_closed: boolean;
     content: string;
-    category: ThreadCategory;
-    author: ThreadAuthor;
-    tags?: Array<ThreadTag>;
+    is_closed?: boolean;
+    is_pinned?: boolean;
+    status?: string;
+    category?: Category_YET;
+    author?: User_RGC;
+    meta_fields?: Array<ThreadMeta_TLB>;
+    post_count?: number;
 };
 

@@ -3,10 +3,7 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export type RegisterUserSchema = {
-    password: string;
-    password2: string;
-    username?: string;
-    email: string;
+export type Body_users_upload_user_avatar = {
+    avatar: Blob;
 };
 

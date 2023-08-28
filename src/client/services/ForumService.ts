@@ -2,15 +2,14 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-import type { Category_LYU } from '../models/Category_LYU';
+import type { CategoryOut } from '../models/CategoryOut';
 import type { CreatePostSchema } from '../models/CreatePostSchema';
 import type { CreateThreadSchema } from '../models/CreateThreadSchema';
-import type { Page_Category_LYU_ } from '../models/Page_Category_LYU_';
+import type { Page_CategoryOut_ } from '../models/Page_CategoryOut_';
+import type { Page_LikeOut_ } from '../models/Page_LikeOut_';
 import type { Page_PostOut_ } from '../models/Page_PostOut_';
 import type { Page_ThreadOut_ } from '../models/Page_ThreadOut_';
-import type { Post } from '../models/Post';
 import type { PostOut } from '../models/PostOut';
-import type { Thread_ALL } from '../models/Thread_ALL';
 import type { ThreadOut } from '../models/ThreadOut';
 import type { UpdatePostSchema } from '../models/UpdatePostSchema';
 import type { UpdateThreadSchema } from '../models/UpdateThreadSchema';
@@ -30,13 +29,13 @@ export class ForumService {
      * :return:
      * @param page
      * @param size
-     * @returns Page_Category_LYU_ Successful Response
+     * @returns Page_CategoryOut_ Successful Response
      * @throws ApiError
      */
     public getCategories(
         page: number = 1,
         size: number = 50,
-    ): CancelablePromise<Page_Category_LYU_> {
+    ): CancelablePromise<Page_CategoryOut_> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/forum/categories',
@@ -56,12 +55,12 @@ export class ForumService {
      * :param category:
      * :return:
      * @param categoryId
-     * @returns Category_LYU Successful Response
+     * @returns CategoryOut Successful Response
      * @throws ApiError
      */
     public getCategory(
         categoryId: number,
-    ): CancelablePromise<Category_LYU> {
+    ): CancelablePromise<CategoryOut> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/forum/categories/{category_id}',
@@ -81,24 +80,36 @@ export class ForumService {
      * :param category_id:
      * :param params:
      * :return:
-     * @param categoryId
      * @param page
      * @param size
+     * @param category
+     * @param server
+     * @param orderBy
+     * @param status
+     * @param closed
      * @returns Page_ThreadOut_ Successful Response
      * @throws ApiError
      */
     public getThreads(
-        categoryId?: number,
         page: number = 1,
         size: number = 50,
+        category?: number,
+        server?: number,
+        orderBy: string = '-created_at',
+        status?: string,
+        closed?: boolean,
     ): CancelablePromise<Page_ThreadOut_> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/forum/threads',
             query: {
-                'category_id': categoryId,
                 'page': page,
                 'size': size,
+                'category': category,
+                'server': server,
+                'order_by': orderBy,
+                'status': status,
+                'closed': closed,
             },
             errors: {
                 422: `Validation Error`,
@@ -109,18 +120,19 @@ export class ForumService {
     /**
      * Create Thread
      * Create new thread.
+     * :param thread_meta_service:
      * :param categories_service:
      * :param threads_service:
      * :param thread_data:
      * :param user:
      * :return:
      * @param requestBody
-     * @returns Thread_ALL Successful Response
+     * @returns ThreadOut Successful Response
      * @throws ApiError
      */
     public createThread(
         requestBody: CreateThreadSchema,
-    ): CancelablePromise<Thread_ALL> {
+    ): CancelablePromise<ThreadOut> {
         return this.httpRequest.request({
             method: 'POST',
             url: '/v1/forum/threads',
@@ -248,12 +260,12 @@ export class ForumService {
      * :param post:
      * :return:
      * @param postId
-     * @returns Post Successful Response
+     * @returns PostOut Successful Response
      * @throws ApiError
      */
     public getPostById(
         postId: number,
-    ): CancelablePromise<Post> {
+    ): CancelablePromise<PostOut> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/forum/posts/{post_id}',
@@ -300,14 +312,14 @@ export class ForumService {
      * @param postId
      * @param page
      * @param size
-     * @returns any Successful Response
+     * @returns Page_LikeOut_ Successful Response
      * @throws ApiError
      */
     public getPostLikes(
         postId: number,
         page: number = 1,
         size: number = 50,
-    ): CancelablePromise<any> {
+    ): CancelablePromise<Page_LikeOut_> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/forum/posts/{post_id}/likes',

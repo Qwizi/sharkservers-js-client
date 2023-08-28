@@ -8,9 +8,10 @@ import type { Body_auth_login_user } from '../models/Body_auth_login_user';
 import type { RefreshTokenSchema } from '../models/RefreshTokenSchema';
 import type { RegisterUserSchema } from '../models/RegisterUserSchema';
 import type { ResendActivationCodeSchema } from '../models/ResendActivationCodeSchema';
+import type { ResetPasswordSchema } from '../models/ResetPasswordSchema';
 import type { TokenSchema } from '../models/TokenSchema';
-import type { User_JQQ } from '../models/User_JQQ';
 import type { UserActivatedSchema } from '../models/UserActivatedSchema';
+import type { UserOut } from '../models/UserOut';
 
 import type { CancelablePromise } from '../core/CancelablePromise';
 import type { BaseHttpRequest } from '../core/BaseHttpRequest';
@@ -21,18 +22,13 @@ export class AuthService {
 
     /**
      * Register
-     * Register a new user
-     * :param auth_service:
-     * :param user_data:
-     * :param redis:
-     * :return UserOut:
      * @param requestBody
-     * @returns User_JQQ Successful Response
+     * @returns UserOut Successful Response
      * @throws ApiError
      */
     public register(
         requestBody: RegisterUserSchema,
-    ): CancelablePromise<User_JQQ> {
+    ): CancelablePromise<UserOut> {
         return this.httpRequest.request({
             method: 'POST',
             url: '/v1/auth/register',
@@ -102,10 +98,10 @@ export class AuthService {
      * :param auth_service:
      * :param user:
      * :return:
-     * @returns User_JQQ Successful Response
+     * @returns UserOut Successful Response
      * @throws ApiError
      */
-    public logoutUser(): CancelablePromise<User_JQQ> {
+    public logoutUser(): CancelablePromise<UserOut> {
         return this.httpRequest.request({
             method: 'POST',
             url: '/v1/auth/logout',
@@ -115,9 +111,9 @@ export class AuthService {
     /**
      * Activate User
      * Activate user
+     * :param activate_code_service:
      * :param auth_service:
      * :param activate_code_data:
-     * :param redis:
      * :return bool:
      * @param requestBody
      * @returns UserActivatedSchema Successful Response
@@ -140,17 +136,19 @@ export class AuthService {
     /**
      * Resend Activate Code
      * Resend activate code
+     * :param code_service:
+     * :param background_tasks:
+     * :param email_service:
      * :param auth_service:
      * :param data:
-     * :param redis:
      * :return bool:
      * @param requestBody
-     * @returns any Successful Response
+     * @returns string Successful Response
      * @throws ApiError
      */
     public resendActivateCode(
         requestBody: ResendActivationCodeSchema,
-    ): CancelablePromise<any> {
+    ): CancelablePromise<Record<string, string>> {
         return this.httpRequest.request({
             method: 'POST',
             url: '/v1/auth/activate/resend',
@@ -205,6 +203,58 @@ export class AuthService {
             url: '/v1/auth/apps/token',
             formData: formData,
             mediaType: 'application/x-www-form-urlencoded',
+            errors: {
+                422: `Validation Error`,
+            },
+        });
+    }
+
+    /**
+     * Forgot Password Request
+     * Forgot password request
+     * :param code_service:
+     * :param background_tasks:
+     * :param email_service:
+     * :param auth_service:
+     * :param data:
+     * :return bool:
+     * @param requestBody
+     * @returns string Successful Response
+     * @throws ApiError
+     */
+    public forgotPasswordRequest(
+        requestBody: ResendActivationCodeSchema,
+    ): CancelablePromise<Record<string, string>> {
+        return this.httpRequest.request({
+            method: 'POST',
+            url: '/v1/auth/forgot-password',
+            body: requestBody,
+            mediaType: 'application/json',
+            errors: {
+                422: `Validation Error`,
+            },
+        });
+    }
+
+    /**
+     * Reset Password
+     * Reset password
+     * :param code_service:
+     * :param auth_service:
+     * :param data:
+     * :return bool:
+     * @param requestBody
+     * @returns any Successful Response
+     * @throws ApiError
+     */
+    public resetPassword(
+        requestBody: ResetPasswordSchema,
+    ): CancelablePromise<Record<string, any>> {
+        return this.httpRequest.request({
+            method: 'POST',
+            url: '/v1/auth/reset-password',
+            body: requestBody,
+            mediaType: 'application/json',
             errors: {
                 422: `Validation Error`,
             },

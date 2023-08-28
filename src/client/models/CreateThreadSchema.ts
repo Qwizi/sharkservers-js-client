@@ -7,5 +7,9 @@ export type CreateThreadSchema = {
     title: string;
     content: string;
     category: number;
+    server_id?: number;
+    question_experience?: string;
+    question_age?: number;
+    question_reason?: string;
 };
 

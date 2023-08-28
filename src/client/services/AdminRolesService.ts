@@ -3,9 +3,9 @@
 /* tslint:disable */
 /* eslint-disable */
 import type { CreateRoleSchema } from '../models/CreateRoleSchema';
-import type { Page_Role_DKD_ } from '../models/Page_Role_DKD_';
-import type { Role_DKD } from '../models/Role_DKD';
-import type { Role_PJU } from '../models/Role_PJU';
+import type { Page_RoleOut_ } from '../models/Page_RoleOut_';
+import type { RoleOut } from '../models/RoleOut';
+import type { RoleOutWithScopes } from '../models/RoleOutWithScopes';
 import type { UpdateRoleSchema } from '../models/UpdateRoleSchema';
 
 import type { CancelablePromise } from '../core/CancelablePromise';
@@ -24,13 +24,13 @@ export class AdminRolesService {
      * :return AbstractPag[RoleOut]:
      * @param page
      * @param size
-     * @returns Page_Role_DKD_ Successful Response
+     * @returns Page_RoleOut_ Successful Response
      * @throws ApiError
      */
     public adminGetRoles(
         page: number = 1,
         size: number = 50,
-    ): CancelablePromise<Page_Role_DKD_> {
+    ): CancelablePromise<Page_RoleOut_> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/admin/roles',
@@ -53,12 +53,12 @@ export class AdminRolesService {
      * :param scopes_service:
      * :return:
      * @param requestBody
-     * @returns Role_PJU Successful Response
+     * @returns RoleOutWithScopes Successful Response
      * @throws ApiError
      */
     public adminCreateRole(
         requestBody: CreateRoleSchema,
-    ): CancelablePromise<Role_PJU> {
+    ): CancelablePromise<RoleOutWithScopes> {
         return this.httpRequest.request({
             method: 'POST',
             url: '/v1/admin/roles',
@@ -78,12 +78,12 @@ export class AdminRolesService {
      * :param user:
      * :return:
      * @param roleId
-     * @returns Role_PJU Successful Response
+     * @returns RoleOutWithScopes Successful Response
      * @throws ApiError
      */
     public adminGetRole(
         roleId: number,
-    ): CancelablePromise<Role_PJU> {
+    ): CancelablePromise<RoleOutWithScopes> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/admin/roles/{role_id}',
@@ -156,13 +156,13 @@ export class AdminRolesService {
      * Admin Add Scopes To Role
      * @param roleId
      * @param requestBody
-     * @returns Role_DKD Successful Response
+     * @returns RoleOut Successful Response
      * @throws ApiError
      */
     public adminAddScopesToRole(
         roleId: number,
         requestBody: Array<number>,
-    ): CancelablePromise<Role_DKD> {
+    ): CancelablePromise<RoleOut> {
         return this.httpRequest.request({
             method: 'POST',
             url: '/v1/admin/roles/{role_id}/scopes/add',

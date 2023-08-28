@@ -3,14 +3,15 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { User_RGC } from './User_RGC';
+import type { ChatColorModule_LFU } from './ChatColorModule_LFU';
 
-export type PostOut = {
+export type Server_HDX = {
     created_at?: string;
     updated_at?: string;
     id?: number;
-    author?: User_RGC;
-    content: string;
-    likes_count?: number;
+    name: string;
+    ip: string;
+    port: number;
+    server_chat_color_module?: Array<ChatColorModule_LFU>;
 };
 

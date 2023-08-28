@@ -3,7 +3,7 @@
 /* tslint:disable */
 /* eslint-disable */
 import type { CreateChatMessageSchema } from '../models/CreateChatMessageSchema';
-import type { Page_Chat_OGG_ } from '../models/Page_Chat_OGG_';
+import type { Page_Chat_BTY_ } from '../models/Page_Chat_BTY_';
 
 import type { CancelablePromise } from '../core/CancelablePromise';
 import type { BaseHttpRequest } from '../core/BaseHttpRequest';
@@ -19,13 +19,13 @@ export class ChatService {
      * :return AbstractPage:
      * @param page
      * @param size
-     * @returns Page_Chat_OGG_ Successful Response
+     * @returns Page_Chat_BTY_ Successful Response
      * @throws ApiError
      */
     public getChatMessages(
         page: number = 1,
         size: number = 50,
-    ): CancelablePromise<Page_Chat_OGG_> {
+    ): CancelablePromise<Page_Chat_BTY_> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/chat',

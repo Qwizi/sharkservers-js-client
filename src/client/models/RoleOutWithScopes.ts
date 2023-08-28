@@ -3,14 +3,15 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { User_RGC } from './User_RGC';
+import type { Scope_HUU } from './Scope_HUU';
 
-export type PostOut = {
+export type RoleOutWithScopes = {
     created_at?: string;
     updated_at?: string;
     id?: number;
-    author?: User_RGC;
-    content: string;
-    likes_count?: number;
+    name: string;
+    color?: string;
+    scopes?: Array<Scope_HUU>;
+    is_staff?: boolean;
 };
 

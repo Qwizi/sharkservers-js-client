@@ -3,9 +3,8 @@
 /* tslint:disable */
 /* eslint-disable */
 import type { CreatePlayerChatColorSchema } from '../models/CreatePlayerChatColorSchema';
-import type { Server_HWV } from '../models/Server_HWV';
+import type { Server_HDX } from '../models/Server_HDX';
 import type { UpdatePlayerChatColorSchema } from '../models/UpdatePlayerChatColorSchema';
-import type { UpdatePlayerStatsSchema } from '../models/UpdatePlayerStatsSchema';
 
 import type { CancelablePromise } from '../core/CancelablePromise';
 import type { BaseHttpRequest } from '../core/BaseHttpRequest';
@@ -67,141 +66,17 @@ export class ServersService {
      * :param server_id:
      * :return:
      * @param serverId
-     * @returns Server_HWV Successful Response
+     * @returns Server_HDX Successful Response
      * @throws ApiError
      */
     public getServer(
         serverId: number,
-    ): CancelablePromise<Server_HWV> {
+    ): CancelablePromise<Server_HDX> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/servers/{server_id}',
             path: {
                 'server_id': serverId,
-            },
-            errors: {
-                422: `Validation Error`,
-            },
-        });
-    }
-
-    /**
-     * Get Players Stats
-     * Get server player stats
-     * :param server_player_stats_service:
-     * :param server:
-     * :return:
-     * @param serverId
-     * @param page
-     * @param size
-     * @returns any Successful Response
-     * @throws ApiError
-     */
-    public getPlayersStats(
-        serverId: number,
-        page: number = 1,
-        size: number = 50,
-    ): CancelablePromise<any> {
-        return this.httpRequest.request({
-            method: 'GET',
-            url: '/v1/servers/{server_id}/player-stats',
-            path: {
-                'server_id': serverId,
-            },
-            query: {
-                'page': page,
-                'size': size,
-            },
-            errors: {
-                422: `Validation Error`,
-            },
-        });
-    }
-
-    /**
-     * Get Server Player Stats
-     * Get server player stats
-     * :param server_player_stats:
-     * :param player:
-     * :param server_player_stats_service:
-     * :param server:
-     * :return:
-     * @param serverId
-     * @param steamid64
-     * @returns any Successful Response
-     * @throws ApiError
-     */
-    public getServerPlayerStats(
-        serverId: number,
-        steamid64: string,
-    ): CancelablePromise<any> {
-        return this.httpRequest.request({
-            method: 'GET',
-            url: '/v1/servers/{server_id}/player-stats/{steamid64}',
-            path: {
-                'server_id': serverId,
-                'steamid64': steamid64,
-            },
-            errors: {
-                422: `Validation Error`,
-            },
-        });
-    }
-
-    /**
-     * Update Server Player Stats
-     * Update server player stats
-     * :param player_stats_service:
-     * :param server_player_stats:
-     * :return:
-     * @param serverId
-     * @param steamid64
-     * @param requestBody
-     * @returns any Successful Response
-     * @throws ApiError
-     */
-    public updateServerPlayerStats(
-        serverId: number,
-        steamid64: string,
-        requestBody: UpdatePlayerStatsSchema,
-    ): CancelablePromise<any> {
-        return this.httpRequest.request({
-            method: 'PUT',
-            url: '/v1/servers/{server_id}/player-stats/{steamid64}',
-            path: {
-                'server_id': serverId,
-                'steamid64': steamid64,
-            },
-            body: requestBody,
-            mediaType: 'application/json',
-            errors: {
-                422: `Validation Error`,
-            },
-        });
-    }
-
-    /**
-     * Create Server Player Stats
-     * Create server player stats
-     * :param player:
-     * :param server_player_stats_service:
-     * :param server:
-     * :return:
-     * @param serverId
-     * @param steamid64
-     * @returns any Successful Response
-     * @throws ApiError
-     */
-    public createServerPlayerStats(
-        serverId: number,
-        steamid64: string,
-    ): CancelablePromise<any> {
-        return this.httpRequest.request({
-            method: 'POST',
-            url: '/v1/servers/{server_id}/player-stats/{steamid64}',
-            path: {
-                'server_id': serverId,
-                'steamid64': steamid64,
             },
             errors: {
                 422: `Validation Error`,

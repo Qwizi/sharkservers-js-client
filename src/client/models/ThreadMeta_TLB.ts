@@ -3,14 +3,12 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { User_RGC } from './User_RGC';
-
-export type PostOut = {
+export type ThreadMeta_TLB = {
     created_at?: string;
     updated_at?: string;
-    id?: number;
-    author?: User_RGC;
-    content: string;
-    likes_count?: number;
+    id?: string;
+    name: string;
+    value?: string;
+    description?: string;
 };
 

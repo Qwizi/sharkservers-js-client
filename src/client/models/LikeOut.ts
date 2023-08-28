@@ -5,12 +5,10 @@
 
 import type { User_RGC } from './User_RGC';
 
-export type PostOut = {
+export type LikeOut = {
     created_at?: string;
     updated_at?: string;
     id?: number;
     author?: User_RGC;
-    content: string;
-    likes_count?: number;
 };
 

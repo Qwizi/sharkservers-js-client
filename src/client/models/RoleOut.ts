@@ -3,14 +3,12 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { User_RGC } from './User_RGC';
-
-export type PostOut = {
+export type RoleOut = {
     created_at?: string;
     updated_at?: string;
     id?: number;
-    author?: User_RGC;
-    content: string;
-    likes_count?: number;
+    name: string;
+    color?: string;
+    is_staff?: boolean;
 };
 

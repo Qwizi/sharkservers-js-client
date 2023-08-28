@@ -3,14 +3,13 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { User_RGC } from './User_RGC';
+import type { User_HTP } from './User_HTP';
 
-export type PostOut = {
+export type Chat_BTY = {
     created_at?: string;
     updated_at?: string;
     id?: number;
-    author?: User_RGC;
-    content: string;
-    likes_count?: number;
+    author?: User_HTP;
+    message: string;
 };
 

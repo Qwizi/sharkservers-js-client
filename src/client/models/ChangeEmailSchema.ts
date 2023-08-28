@@ -3,10 +3,7 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export type RegisterUserSchema = {
-    password: string;
-    password2: string;
-    username?: string;
+export type ChangeEmailSchema = {
     email: string;
 };
 

@@ -3,10 +3,11 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export type RegisterUserSchema = {
-    password: string;
-    password2: string;
-    username?: string;
-    email: string;
+export type Ban_GQQ = {
+    created_at?: string;
+    updated_at?: string;
+    id?: number;
+    reason: string;
+    ban_time?: string;
 };
 
