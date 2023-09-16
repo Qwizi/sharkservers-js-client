@@ -3,13 +3,15 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export type Category_YET = {
+import type { Scope_TEV } from './Scope_TEV';
+
+export type Role_MHE = {
     created_at?: string;
     updated_at?: string;
     id?: number;
     name: string;
-    description?: string;
-    type?: string;
-    threads_count?: number;
+    color?: string;
+    scopes?: Array<Scope_TEV>;
+    is_staff?: boolean;
 };
 

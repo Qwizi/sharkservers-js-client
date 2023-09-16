@@ -3,10 +3,10 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Chat_BTY } from './Chat_BTY';
+import type { Chat_OCU } from './Chat_OCU';
 
-export type Page_Chat_BTY_ = {
-    items: Array<Chat_BTY>;
+export type Page_Chat_OCU_ = {
+    items: Array<Chat_OCU>;
     total: number;
     page?: number;
     size?: number;

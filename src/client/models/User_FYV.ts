@@ -3,9 +3,9 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Role_CCN } from './Role_CCN';
+import type { Role_OUF } from './Role_OUF';
 
-export type User_RGC = {
+export type User_FYV = {
     created_at?: string;
     updated_at?: string;
     id?: number;
@@ -13,8 +13,11 @@ export type User_RGC = {
     is_activated?: boolean;
     is_superuser?: boolean;
     avatar?: string;
-    display_role?: Role_CCN;
+    display_role?: Role_OUF;
     last_login?: string;
     last_online?: string;
+    threads_count?: number;
+    posts_count?: number;
+    likes_count?: number;
 };
 

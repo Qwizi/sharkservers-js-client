@@ -3,12 +3,15 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export type Role_CCN = {
+import type { ChatColorModule_JHV } from './ChatColorModule_JHV';
+
+export type Server_QGM = {
     created_at?: string;
     updated_at?: string;
     id?: number;
     name: string;
-    color?: string;
-    is_staff?: boolean;
+    ip: string;
+    port: number;
+    server_chat_color_module?: Array<ChatColorModule_JHV>;
 };
 

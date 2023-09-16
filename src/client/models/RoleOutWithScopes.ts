@@ -3,7 +3,7 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Scope_HUU } from './Scope_HUU';
+import type { Scope_GEP } from './Scope_GEP';
 
 export type RoleOutWithScopes = {
     created_at?: string;
@@ -11,7 +11,7 @@ export type RoleOutWithScopes = {
     id?: number;
     name: string;
     color?: string;
-    scopes?: Array<Scope_HUU>;
+    scopes?: Array<Scope_GEP>;
     is_staff?: boolean;
 };
 

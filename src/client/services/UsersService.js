@@ -13,16 +13,18 @@ class UsersService {
      * :return Page[UserOut]:
      * @param page
      * @param size
+     * @param orderBy
      * @returns Page_UserOut_ Successful Response
      * @throws ApiError
      */
-    getUsers(page = 1, size = 50) {
+    getUsers(page = 1, size = 50, orderBy = '-id') {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/users',
             query: {
                 'page': page,
                 'size': size,
+                'order_by': orderBy,
             },
             errors: {
                 422: `Validation Error`,
@@ -100,16 +102,18 @@ class UsersService {
      * :return AbstractPage:
      * @param page
      * @param size
+     * @param orderBy
      * @returns any Successful Response
      * @throws ApiError
      */
-    getLoggedUserPosts(page = 1, size = 50) {
+    getLoggedUserPosts(page = 1, size = 50, orderBy = '-id') {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/users/me/posts',
             query: {
                 'page': page,
                 'size': size,
+                'order_by': orderBy,
             },
             errors: {
                 422: `Validation Error`,
@@ -122,16 +126,21 @@ class UsersService {
      * :param threads_service:
      * :param params:
      * :param user:
-     * :return AbstractPage:Email
+     * :return AbstractPage:
+     * @param page
+     * @param size
+     * @param orderBy
+     * @returns any Successful Response
      * @throws ApiError
      */
-    getLoggedUserThreads(page = 1, size = 50) {
+    getLoggedUserThreads(page = 1, size = 50, orderBy = '-id') {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/users/me/threads',
             query: {
                 'page': page,
                 'size': size,
+                'order_by': orderBy,
             },
             errors: {
                 422: `Validation Error`,
@@ -346,10 +355,11 @@ class UsersService {
      * @param userId
      * @param page
      * @param size
+     * @param orderBy
      * @returns any Successful Response
      * @throws ApiError
      */
-    getUserPosts(userId, page = 1, size = 50) {
+    getUserPosts(userId, page = 1, size = 50, orderBy = '-id') {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/users/{user_id}/posts',
@@ -359,6 +369,7 @@ class UsersService {
             query: {
                 'page': page,
                 'size': size,
+                'order_by': orderBy,
             },
             errors: {
                 422: `Validation Error`,
@@ -375,10 +386,11 @@ class UsersService {
      * @param userId
      * @param page
      * @param size
+     * @param orderBy
      * @returns any Successful Response
      * @throws ApiError
      */
-    getUserThreads(userId, page = 1, size = 50) {
+    getUserThreads(userId, page = 1, size = 50, orderBy = '-id') {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/users/{user_id}/threads',
@@ -388,6 +400,7 @@ class UsersService {
             query: {
                 'page': page,
                 'size': size,
+                'order_by': orderBy,
             },
             errors: {
                 422: `Validation Error`,

@@ -3,10 +3,10 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Scope_GOX } from './Scope_GOX';
+import type { Scope_IVP } from './Scope_IVP';
 
-export type Page_Scope_GOX_ = {
-    items: Array<Scope_GOX>;
+export type Page_Scope_IVP_ = {
+    items: Array<Scope_IVP>;
     total: number;
     page?: number;
     size?: number;

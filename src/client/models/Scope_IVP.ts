@@ -3,14 +3,11 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { App_LUP } from './App_LUP';
-
-export type Scope_HUU = {
+export type Scope_IVP = {
     id?: number;
     app_name: string;
     value: string;
     description: string;
     protected?: boolean;
-    app_scopes?: Array<App_LUP>;
 };
 

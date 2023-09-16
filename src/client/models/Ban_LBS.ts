@@ -3,12 +3,11 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export type SteamRepProfile_JKL = {
+export type Ban_LBS = {
     created_at?: string;
     updated_at?: string;
     id?: number;
-    profile_url: string;
-    is_scammer?: boolean;
-    steamid64: string;
+    reason: string;
+    ban_time?: string;
 };
 

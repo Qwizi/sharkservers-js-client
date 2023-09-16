@@ -3,13 +3,13 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { SteamRepProfile_FPZ } from './SteamRepProfile_FPZ';
+import type { SteamRepProfile_VVH } from './SteamRepProfile_VVH';
 
-export type Player_RFE = {
+export type Player_KPJ = {
     created_at?: string;
     updated_at?: string;
     id?: number;
-    steamrep_profile?: SteamRepProfile_FPZ;
+    steamrep_profile?: SteamRepProfile_VVH;
     username: string;
     steamid3: string;
     steamid32: string;

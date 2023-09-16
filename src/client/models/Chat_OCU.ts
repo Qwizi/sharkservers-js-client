@@ -3,15 +3,13 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { ChatColorModule_LFU } from './ChatColorModule_LFU';
+import type { User_AKB } from './User_AKB';
 
-export type Server_HDX = {
+export type Chat_OCU = {
     created_at?: string;
     updated_at?: string;
     id?: number;
-    name: string;
-    ip: string;
-    port: number;
-    server_chat_color_module?: Array<ChatColorModule_LFU>;
+    author?: User_AKB;
+    message: string;
 };
 

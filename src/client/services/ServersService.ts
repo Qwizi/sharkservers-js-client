@@ -3,7 +3,7 @@
 /* tslint:disable */
 /* eslint-disable */
 import type { CreatePlayerChatColorSchema } from '../models/CreatePlayerChatColorSchema';
-import type { Server_HDX } from '../models/Server_HDX';
+import type { Server_QGM } from '../models/Server_QGM';
 import type { UpdatePlayerChatColorSchema } from '../models/UpdatePlayerChatColorSchema';
 
 import type { CancelablePromise } from '../core/CancelablePromise';
@@ -66,12 +66,12 @@ export class ServersService {
      * :param server_id:
      * :return:
      * @param serverId
-     * @returns Server_HDX Successful Response
+     * @returns Server_QGM Successful Response
      * @throws ApiError
      */
     public getServer(
         serverId: number,
-    ): CancelablePromise<Server_HDX> {
+    ): CancelablePromise<Server_QGM> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/servers/{server_id}',

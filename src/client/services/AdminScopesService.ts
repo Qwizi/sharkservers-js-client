@@ -3,8 +3,8 @@
 /* tslint:disable */
 /* eslint-disable */
 import type { CreateScopeSchema } from '../models/CreateScopeSchema';
-import type { Page_Scope_GOX_ } from '../models/Page_Scope_GOX_';
-import type { Scope_GOX } from '../models/Scope_GOX';
+import type { Page_Scope_IVP_ } from '../models/Page_Scope_IVP_';
+import type { Scope_IVP } from '../models/Scope_IVP';
 import type { UpdateScopeSchema } from '../models/UpdateScopeSchema';
 
 import type { CancelablePromise } from '../core/CancelablePromise';
@@ -23,13 +23,13 @@ export class AdminScopesService {
      * :return:
      * @param page
      * @param size
-     * @returns Page_Scope_GOX_ Successful Response
+     * @returns Page_Scope_IVP_ Successful Response
      * @throws ApiError
      */
     public adminGetScopes(
         page: number = 1,
         size: number = 50,
-    ): CancelablePromise<Page_Scope_GOX_> {
+    ): CancelablePromise<Page_Scope_IVP_> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/admin/scopes',
@@ -50,12 +50,12 @@ export class AdminScopesService {
      * :param admin_user:
      * :return:
      * @param requestBody
-     * @returns Scope_GOX Successful Response
+     * @returns Scope_IVP Successful Response
      * @throws ApiError
      */
     public adminCreateScope(
         requestBody: CreateScopeSchema,
-    ): CancelablePromise<Scope_GOX> {
+    ): CancelablePromise<Scope_IVP> {
         return this.httpRequest.request({
             method: 'POST',
             url: '/v1/admin/scopes',
@@ -70,12 +70,12 @@ export class AdminScopesService {
     /**
      * Admin Get Scope
      * @param scopeId
-     * @returns Scope_GOX Successful Response
+     * @returns Scope_IVP Successful Response
      * @throws ApiError
      */
     public adminGetScope(
         scopeId: number,
-    ): CancelablePromise<Scope_GOX> {
+    ): CancelablePromise<Scope_IVP> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/admin/scopes/{scope_id}',
@@ -98,13 +98,13 @@ export class AdminScopesService {
      * :return:
      * @param scopeId
      * @param requestBody
-     * @returns Scope_GOX Successful Response
+     * @returns Scope_IVP Successful Response
      * @throws ApiError
      */
     public adminUpdateScope(
         scopeId: number,
         requestBody: UpdateScopeSchema,
-    ): CancelablePromise<Scope_GOX> {
+    ): CancelablePromise<Scope_IVP> {
         return this.httpRequest.request({
             method: 'PUT',
             url: '/v1/admin/scopes/{scope_id}',
@@ -126,12 +126,12 @@ export class AdminScopesService {
      * :param admin_user:
      * :return:
      * @param scopeId
-     * @returns Scope_GOX Successful Response
+     * @returns Scope_IVP Successful Response
      * @throws ApiError
      */
     public adminDeleteScope(
         scopeId: number,
-    ): CancelablePromise<Scope_GOX> {
+    ): CancelablePromise<Scope_IVP> {
         return this.httpRequest.request({
             method: 'DELETE',
             url: '/v1/admin/scopes/{scope_id}',

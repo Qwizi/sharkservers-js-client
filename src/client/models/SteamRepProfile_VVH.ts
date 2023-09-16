@@ -3,7 +3,7 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export type SteamRepProfile_FPZ = {
+export type SteamRepProfile_VVH = {
     created_at?: string;
     updated_at?: string;
     id?: number;

@@ -3,12 +3,12 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { User_FYV } from './User_FYV';
-
-export type LikeOut = {
+export type Server_UNO = {
     created_at?: string;
     updated_at?: string;
     id?: number;
-    author?: User_FYV;
+    name: string;
+    ip: string;
+    port: number;
 };
 

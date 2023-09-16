@@ -3,15 +3,12 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Scope_HUU } from './Scope_HUU';
-
-export type Role_WAF = {
+export type ThreadMeta_EPL = {
     created_at?: string;
     updated_at?: string;
-    id?: number;
+    id?: string;
     name: string;
-    color?: string;
-    scopes?: Array<Scope_HUU>;
-    is_staff?: boolean;
+    value?: string;
+    description?: string;
 };
 

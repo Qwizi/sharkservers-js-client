@@ -67,4 +67,16 @@ export class RootService {
         });
     }
 
+    /**
+     * Test
+     * @returns any Successful Response
+     * @throws ApiError
+     */
+    public test(): CancelablePromise<any> {
+        return this.httpRequest.request({
+            method: 'GET',
+            url: '/test',
+        });
+    }
+
 }

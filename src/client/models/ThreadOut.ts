@@ -3,9 +3,10 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Category_YET } from './Category_YET';
-import type { ThreadMeta_TLB } from './ThreadMeta_TLB';
-import type { User_RGC } from './User_RGC';
+import type { Category_GMP } from './Category_GMP';
+import type { Server_UNO } from './Server_UNO';
+import type { ThreadMeta_EPL } from './ThreadMeta_EPL';
+import type { User_FYV } from './User_FYV';
 
 export type ThreadOut = {
     created_at?: string;
@@ -16,9 +17,10 @@ export type ThreadOut = {
     is_closed?: boolean;
     is_pinned?: boolean;
     status?: string;
-    category?: Category_YET;
-    author?: User_RGC;
-    meta_fields?: Array<ThreadMeta_TLB>;
+    category?: Category_GMP;
+    author?: User_FYV;
+    meta_fields?: Array<ThreadMeta_EPL>;
     post_count?: number;
+    server?: Server_UNO;
 };
 

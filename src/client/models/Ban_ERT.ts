@@ -3,7 +3,7 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export type Ban_GQQ = {
+export type Ban_ERT = {
     created_at?: string;
     updated_at?: string;
     id?: number;

@@ -3,12 +3,11 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { User_FYV } from './User_FYV';
-
-export type LikeOut = {
-    created_at?: string;
-    updated_at?: string;
+export type Scope_GEP = {
     id?: number;
-    author?: User_FYV;
+    app_name: string;
+    value: string;
+    description: string;
+    protected?: boolean;
 };
 

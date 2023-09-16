@@ -3,13 +3,12 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { User_HTP } from './User_HTP';
-
-export type Chat_BTY = {
+export type SteamRepProfile_JNX = {
     created_at?: string;
     updated_at?: string;
     id?: number;
-    author?: User_HTP;
-    message: string;
+    profile_url: string;
+    is_scammer?: boolean;
+    steamid64: string;
 };
 

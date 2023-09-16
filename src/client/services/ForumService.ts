@@ -29,12 +29,14 @@ export class ForumService {
      * :return:
      * @param page
      * @param size
+     * @param orderBy
      * @returns Page_CategoryOut_ Successful Response
      * @throws ApiError
      */
     public getCategories(
         page: number = 1,
         size: number = 50,
+        orderBy: string = '-id',
     ): CancelablePromise<Page_CategoryOut_> {
         return this.httpRequest.request({
             method: 'GET',
@@ -42,6 +44,7 @@ export class ForumService {
             query: {
                 'page': page,
                 'size': size,
+                'order_by': orderBy,
             },
             errors: {
                 422: `Validation Error`,
@@ -82,9 +85,9 @@ export class ForumService {
      * :return:
      * @param page
      * @param size
+     * @param orderBy
      * @param category
      * @param server
-     * @param orderBy
      * @param status
      * @param closed
      * @returns Page_ThreadOut_ Successful Response
@@ -93,9 +96,9 @@ export class ForumService {
     public getThreads(
         page: number = 1,
         size: number = 50,
+        orderBy: string = '-id',
         category?: number,
         server?: number,
-        orderBy: string = '-created_at',
         status?: string,
         closed?: boolean,
     ): CancelablePromise<Page_ThreadOut_> {
@@ -105,9 +108,9 @@ export class ForumService {
             query: {
                 'page': page,
                 'size': size,
+                'order_by': orderBy,
                 'category': category,
                 'server': server,
-                'order_by': orderBy,
                 'status': status,
                 'closed': closed,
             },
@@ -207,6 +210,7 @@ export class ForumService {
      * @param threadId
      * @param page
      * @param size
+     * @param orderBy
      * @returns Page_PostOut_ Successful Response
      * @throws ApiError
      */
@@ -214,6 +218,7 @@ export class ForumService {
         threadId?: number,
         page: number = 1,
         size: number = 50,
+        orderBy: string = '-id',
     ): CancelablePromise<Page_PostOut_> {
         return this.httpRequest.request({
             method: 'GET',
@@ -222,6 +227,7 @@ export class ForumService {
                 'thread_id': threadId,
                 'page': page,
                 'size': size,
+                'order_by': orderBy,
             },
             errors: {
                 422: `Validation Error`,
@@ -282,13 +288,13 @@ export class ForumService {
      * Update Post
      * @param postId
      * @param requestBody
-     * @returns PostOut Successful Response
+     * @returns any Successful Response
      * @throws ApiError
      */
     public updatePost(
         postId: number,
         requestBody: UpdatePostSchema,
-    ): CancelablePromise<PostOut> {
+    ): CancelablePromise<any> {
         return this.httpRequest.request({
             method: 'PUT',
             url: '/v1/forum/posts/{post_id}',

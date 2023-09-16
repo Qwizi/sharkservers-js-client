@@ -3,12 +3,15 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export type ThreadMeta_TLB = {
+import type { Scope_GEP } from './Scope_GEP';
+
+export type Role_HFV = {
     created_at?: string;
     updated_at?: string;
-    id?: string;
+    id?: number;
     name: string;
-    value?: string;
-    description?: string;
+    color?: string;
+    scopes?: Array<Scope_GEP>;
+    is_staff?: boolean;
 };
 

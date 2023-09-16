@@ -30,12 +30,14 @@ export class UsersService {
      * :return Page[UserOut]:
      * @param page
      * @param size
+     * @param orderBy
      * @returns Page_UserOut_ Successful Response
      * @throws ApiError
      */
     public getUsers(
         page: number = 1,
         size: number = 50,
+        orderBy: string = '-id',
     ): CancelablePromise<Page_UserOut_> {
         return this.httpRequest.request({
             method: 'GET',
@@ -43,6 +45,7 @@ export class UsersService {
             query: {
                 'page': page,
                 'size': size,
+                'order_by': orderBy,
             },
             errors: {
                 422: `Validation Error`,
@@ -130,12 +133,14 @@ export class UsersService {
      * :return AbstractPage:
      * @param page
      * @param size
+     * @param orderBy
      * @returns any Successful Response
      * @throws ApiError
      */
     public getLoggedUserPosts(
         page: number = 1,
         size: number = 50,
+        orderBy: string = '-id',
     ): CancelablePromise<any> {
         return this.httpRequest.request({
             method: 'GET',
@@ -143,6 +148,7 @@ export class UsersService {
             query: {
                 'page': page,
                 'size': size,
+                'order_by': orderBy,
             },
             errors: {
                 422: `Validation Error`,
@@ -156,12 +162,17 @@ export class UsersService {
      * :param threads_service:
      * :param params:
      * :param user:
-     * :return AbstractPage:Email
+     * :return AbstractPage:
+     * @param page
+     * @param size
+     * @param orderBy
+     * @returns any Successful Response
      * @throws ApiError
      */
     public getLoggedUserThreads(
         page: number = 1,
         size: number = 50,
+        orderBy: string = '-id',
     ): CancelablePromise<any> {
         return this.httpRequest.request({
             method: 'GET',
@@ -169,6 +180,7 @@ export class UsersService {
             query: {
                 'page': page,
                 'size': size,
+                'order_by': orderBy,
             },
             errors: {
                 422: `Validation Error`,
@@ -412,6 +424,7 @@ export class UsersService {
      * @param userId
      * @param page
      * @param size
+     * @param orderBy
      * @returns any Successful Response
      * @throws ApiError
      */
@@ -419,6 +432,7 @@ export class UsersService {
         userId: number,
         page: number = 1,
         size: number = 50,
+        orderBy: string = '-id',
     ): CancelablePromise<any> {
         return this.httpRequest.request({
             method: 'GET',
@@ -429,6 +443,7 @@ export class UsersService {
             query: {
                 'page': page,
                 'size': size,
+                'order_by': orderBy,
             },
             errors: {
                 422: `Validation Error`,
@@ -446,6 +461,7 @@ export class UsersService {
      * @param userId
      * @param page
      * @param size
+     * @param orderBy
      * @returns any Successful Response
      * @throws ApiError
      */
@@ -453,6 +469,7 @@ export class UsersService {
         userId: number,
         page: number = 1,
         size: number = 50,
+        orderBy: string = '-id',
     ): CancelablePromise<any> {
         return this.httpRequest.request({
             method: 'GET',
@@ -463,6 +480,7 @@ export class UsersService {
             query: {
                 'page': page,
                 'size': size,
+                'order_by': orderBy,
             },
             errors: {
                 422: `Validation Error`,

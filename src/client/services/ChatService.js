@@ -12,7 +12,7 @@ class ChatService {
      * :return AbstractPage:
      * @param page
      * @param size
-     * @returns Page_Chat_BTY_ Successful Response
+     * @returns Page_Chat_OCU_ Successful Response
      * @throws ApiError
      */
     getChatMessages(page = 1, size = 50) {

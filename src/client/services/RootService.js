@@ -55,5 +55,16 @@ class RootService {
             url: '/protected',
         });
     }
+    /**
+     * Test
+     * @returns any Successful Response
+     * @throws ApiError
+     */
+    test() {
+        return this.httpRequest.request({
+            method: 'GET',
+            url: '/test',
+        });
+    }
 }
 exports.RootService = RootService;

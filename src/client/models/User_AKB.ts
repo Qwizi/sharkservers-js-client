@@ -3,24 +3,22 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Ban_GQQ } from './Ban_GQQ';
-import type { Player_AHX } from './Player_AHX';
+import type { Player_JVD } from './Player_JVD';
+import type { Role_HFV } from './Role_HFV';
 
-export type User_YNQ = {
+export type User_AKB = {
     created_at?: string;
     updated_at?: string;
     id?: number;
     username: string;
-    email: string;
-    password: string;
     is_activated?: boolean;
     is_superuser?: boolean;
     avatar?: string;
-    last_login?: string;
+    display_role?: Role_HFV;
     last_online?: string;
-    secret_salt: string;
-    banned_user?: Array<Ban_GQQ>;
-    banned_by?: Array<Ban_GQQ>;
-    players?: Array<Player_AHX>;
+    threads_count?: number;
+    posts_count?: number;
+    likes_count?: number;
+    players?: Array<Player_JVD>;
 };
 

@@ -13,16 +13,18 @@ class ForumService {
      * :return:
      * @param page
      * @param size
+     * @param orderBy
      * @returns Page_CategoryOut_ Successful Response
      * @throws ApiError
      */
-    getCategories(page = 1, size = 50) {
+    getCategories(page = 1, size = 50, orderBy = '-id') {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/forum/categories',
             query: {
                 'page': page,
                 'size': size,
+                'order_by': orderBy,
             },
             errors: {
                 422: `Validation Error`,
@@ -59,24 +61,24 @@ class ForumService {
      * :return:
      * @param page
      * @param size
+     * @param orderBy
      * @param category
      * @param server
-     * @param orderBy
      * @param status
      * @param closed
      * @returns Page_ThreadOut_ Successful Response
      * @throws ApiError
      */
-    getThreads(page = 1, size = 50, category, server, orderBy = '-created_at', status, closed) {
+    getThreads(page = 1, size = 50, orderBy = '-id', category, server, status, closed) {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/forum/threads',
             query: {
                 'page': page,
                 'size': size,
+                'order_by': orderBy,
                 'category': category,
                 'server': server,
-                'order_by': orderBy,
                 'status': status,
                 'closed': closed,
             },
@@ -165,10 +167,11 @@ class ForumService {
      * @param threadId
      * @param page
      * @param size
+     * @param orderBy
      * @returns Page_PostOut_ Successful Response
      * @throws ApiError
      */
-    getPosts(threadId, page = 1, size = 50) {
+    getPosts(threadId, page = 1, size = 50, orderBy = '-id') {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/forum/posts',
@@ -176,6 +179,7 @@ class ForumService {
                 'thread_id': threadId,
                 'page': page,
                 'size': size,
+                'order_by': orderBy,
             },
             errors: {
                 422: `Validation Error`,
@@ -229,7 +233,7 @@ class ForumService {
      * Update Post
      * @param postId
      * @param requestBody
-     * @returns PostOut Successful Response
+     * @returns any Successful Response
      * @throws ApiError
      */
     updatePost(postId, requestBody) {
