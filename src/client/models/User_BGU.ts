@@ -3,9 +3,9 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Role_OUF } from './Role_OUF';
+import type { Role_VLE } from './Role_VLE';
 
-export type User_FYV = {
+export type User_BGU = {
     created_at?: string;
     updated_at?: string;
     id?: number;
@@ -13,7 +13,7 @@ export type User_FYV = {
     is_activated?: boolean;
     is_superuser?: boolean;
     avatar?: string;
-    display_role?: Role_OUF;
+    display_role?: Role_VLE;
     last_login?: string;
     last_online?: string;
     threads_count?: number;

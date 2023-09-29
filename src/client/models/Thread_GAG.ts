@@ -4,11 +4,11 @@
 /* eslint-disable */
 
 import type { Category_SCK } from './Category_SCK';
-import type { Server_QIG } from './Server_QIG';
+import type { Post_ATI } from './Post_ATI';
 import type { ThreadMeta_CEX } from './ThreadMeta_CEX';
-import type { User_BGU } from './User_BGU';
+import type { User_GHG } from './User_GHG';
 
-export type ThreadOut = {
+export type Thread_GAG = {
     created_at?: string;
     updated_at?: string;
     id?: number;
@@ -18,9 +18,9 @@ export type ThreadOut = {
     is_pinned?: boolean;
     status?: string;
     category?: Category_SCK;
-    author?: User_BGU;
+    author?: User_GHG;
+    posts?: Array<Post_ATI>;
     meta_fields?: Array<ThreadMeta_CEX>;
     post_count?: number;
-    server?: Server_QIG;
 };
 

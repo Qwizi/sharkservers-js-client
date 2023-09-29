@@ -3,7 +3,7 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export type SteamRepProfile_JNX = {
+export type SteamRepProfile_ROI = {
     created_at?: string;
     updated_at?: string;
     id?: number;

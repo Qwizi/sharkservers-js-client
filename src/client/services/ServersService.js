@@ -51,7 +51,7 @@ class ServersService {
      * :param server_id:
      * :return:
      * @param serverId
-     * @returns Server_QGM Successful Response
+     * @returns Server_IPO Successful Response
      * @throws ApiError
      */
     getServer(serverId) {

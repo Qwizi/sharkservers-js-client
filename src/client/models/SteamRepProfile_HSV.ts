@@ -3,12 +3,12 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export type Role_OUF = {
+export type SteamRepProfile_HSV = {
     created_at?: string;
     updated_at?: string;
     id?: number;
-    name: string;
-    color?: string;
-    is_staff?: boolean;
+    profile_url: string;
+    is_scammer?: boolean;
+    steamid64: string;
 };
 

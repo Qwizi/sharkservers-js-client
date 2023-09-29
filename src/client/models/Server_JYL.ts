@@ -3,15 +3,15 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Scope_RBQ } from './Scope_RBQ';
+import type { Thread_GAG } from './Thread_GAG';
 
-export type RoleOutWithScopes = {
+export type Server_JYL = {
     created_at?: string;
     updated_at?: string;
     id?: number;
     name: string;
-    color?: string;
-    scopes?: Array<Scope_RBQ>;
-    is_staff?: boolean;
+    ip: string;
+    port: number;
+    thread_server?: Array<Thread_GAG>;
 };
 

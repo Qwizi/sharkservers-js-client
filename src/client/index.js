@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UsersService = exports.ServersService = exports.ScopesService = exports.RootService = exports.RolesService = exports.PlayersService = exports.ForumService = exports.ChatService = exports.AuthService = exports.AdminUsersService = exports.AdminServersService = exports.AdminScopesService = exports.AdminRolesService = exports.AdminPlayersService = exports.AdminForumService = exports.ThreadActionEnum = exports.CategoryTypeEnum = exports.OpenAPI = exports.CancelError = exports.CancelablePromise = exports.BaseHttpRequest = exports.ApiError = exports.ApiClient = void 0;
+exports.UsersService = exports.ServersService = exports.ScopesService = exports.RootService = exports.RolesService = exports.PlayersService = exports.ForumService = exports.AuthService = exports.AdminUsersService = exports.AdminServersService = exports.AdminScopesService = exports.AdminRolesService = exports.AdminPlayersService = exports.AdminForumService = exports.ThreadActionEnum = exports.CategoryTypeEnum = exports.OpenAPI = exports.CancelError = exports.CancelablePromise = exports.BaseHttpRequest = exports.ApiError = exports.ApiClient = void 0;
 /* generated using openapi-typescript-codegen -- do no edit */
 /* istanbul ignore file */
 /* tslint:disable */
@@ -34,8 +34,6 @@ var AdminUsersService_1 = require("./services/AdminUsersService");
 Object.defineProperty(exports, "AdminUsersService", { enumerable: true, get: function () { return AdminUsersService_1.AdminUsersService; } });
 var AuthService_1 = require("./services/AuthService");
 Object.defineProperty(exports, "AuthService", { enumerable: true, get: function () { return AuthService_1.AuthService; } });
-var ChatService_1 = require("./services/ChatService");
-Object.defineProperty(exports, "ChatService", { enumerable: true, get: function () { return ChatService_1.ChatService; } });
 var ForumService_1 = require("./services/ForumService");
 Object.defineProperty(exports, "ForumService", { enumerable: true, get: function () { return ForumService_1.ForumService; } });
 var PlayersService_1 = require("./services/PlayersService");

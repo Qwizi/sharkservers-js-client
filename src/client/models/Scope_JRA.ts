@@ -3,7 +3,7 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export type Scope_GEP = {
+export type Scope_JRA = {
     id?: number;
     app_name: string;
     value: string;

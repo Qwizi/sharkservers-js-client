@@ -3,15 +3,10 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Scope_RBQ } from './Scope_RBQ';
-
-export type RoleOutWithScopes = {
+export type Chat_YET = {
     created_at?: string;
     updated_at?: string;
     id?: number;
-    name: string;
-    color?: string;
-    scopes?: Array<Scope_RBQ>;
-    is_staff?: boolean;
+    message: string;
 };
 

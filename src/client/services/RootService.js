@@ -57,13 +57,20 @@ class RootService {
     }
     /**
      * Test
+     * @param msg
      * @returns any Successful Response
      * @throws ApiError
      */
-    test() {
+    test(msg) {
         return this.httpRequest.request({
             method: 'GET',
             url: '/test',
+            query: {
+                'msg': msg,
+            },
+            errors: {
+                422: `Validation Error`,
+            },
         });
     }
 }

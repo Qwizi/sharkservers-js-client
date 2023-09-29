@@ -3,15 +3,15 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Scope_RBQ } from './Scope_RBQ';
+import type { Scope_JRA } from './Scope_JRA';
 
-export type RoleOutWithScopes = {
+export type Role_QWO = {
     created_at?: string;
     updated_at?: string;
     id?: number;
     name: string;
     color?: string;
-    scopes?: Array<Scope_RBQ>;
+    scopes?: Array<Scope_JRA>;
     is_staff?: boolean;
 };
 

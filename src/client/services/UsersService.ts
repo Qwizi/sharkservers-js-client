@@ -11,6 +11,7 @@ import type { ChangeUsernameSchema } from '../models/ChangeUsernameSchema';
 import type { CreateAppSchema } from '../models/CreateAppSchema';
 import type { Page_StaffRolesSchema_ } from '../models/Page_StaffRolesSchema_';
 import type { Page_UserOut_ } from '../models/Page_UserOut_';
+import type { SteamAuthSchema } from '../models/SteamAuthSchema';
 import type { SuccessChangeUsernameSchema } from '../models/SuccessChangeUsernameSchema';
 import type { UserOut } from '../models/UserOut';
 import type { UserOutWithEmail } from '../models/UserOutWithEmail';
@@ -31,6 +32,7 @@ export class UsersService {
      * @param page
      * @param size
      * @param orderBy
+     * @param username
      * @returns Page_UserOut_ Successful Response
      * @throws ApiError
      */
@@ -38,6 +40,7 @@ export class UsersService {
         page: number = 1,
         size: number = 50,
         orderBy: string = '-id',
+        username?: string,
     ): CancelablePromise<Page_UserOut_> {
         return this.httpRequest.request({
             method: 'GET',
@@ -46,6 +49,7 @@ export class UsersService {
                 'page': page,
                 'size': size,
                 'order_by': orderBy,
+                'username': username,
             },
             errors: {
                 422: `Validation Error`,
@@ -384,6 +388,26 @@ export class UsersService {
             url: '/v1/users/me/avatar',
             formData: formData,
             mediaType: 'multipart/form-data',
+            errors: {
+                422: `Validation Error`,
+            },
+        });
+    }
+
+    /**
+     * Connect Steam Profile
+     * @param requestBody
+     * @returns any Successful Response
+     * @throws ApiError
+     */
+    public connectSteamProfile(
+        requestBody: SteamAuthSchema,
+    ): CancelablePromise<any> {
+        return this.httpRequest.request({
+            method: 'POST',
+            url: '/v1/users/me/connect/steam',
+            body: requestBody,
+            mediaType: 'application/json',
             errors: {
                 422: `Validation Error`,
             },

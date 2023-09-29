@@ -3,7 +3,7 @@
 /* tslint:disable */
 /* eslint-disable */
 import type { CreatePlayerSchema } from '../models/CreatePlayerSchema';
-import type { Player_KPJ } from '../models/Player_KPJ';
+import type { Player_LCL } from '../models/Player_LCL';
 
 import type { CancelablePromise } from '../core/CancelablePromise';
 import type { BaseHttpRequest } from '../core/BaseHttpRequest';
@@ -59,12 +59,12 @@ export class AdminPlayersService {
     /**
      * Admin Get Steam Profile
      * @param profileId
-     * @returns Player_KPJ Successful Response
+     * @returns Player_LCL Successful Response
      * @throws ApiError
      */
     public adminGetSteamProfile(
         profileId: number,
-    ): CancelablePromise<Player_KPJ> {
+    ): CancelablePromise<Player_LCL> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/admin/players/{profile_id}',
@@ -80,12 +80,12 @@ export class AdminPlayersService {
     /**
      * Admin Delete Steam Profile
      * @param profileId
-     * @returns Player_KPJ Successful Response
+     * @returns Player_LCL Successful Response
      * @throws ApiError
      */
     public adminDeleteSteamProfile(
         profileId: number,
-    ): CancelablePromise<Player_KPJ> {
+    ): CancelablePromise<Player_LCL> {
         return this.httpRequest.request({
             method: 'DELETE',
             url: '/v1/admin/players/{profile_id}',

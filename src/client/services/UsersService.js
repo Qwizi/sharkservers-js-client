@@ -14,10 +14,11 @@ class UsersService {
      * @param page
      * @param size
      * @param orderBy
+     * @param username
      * @returns Page_UserOut_ Successful Response
      * @throws ApiError
      */
-    getUsers(page = 1, size = 50, orderBy = '-id') {
+    getUsers(page = 1, size = 50, orderBy = '-id', username) {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/users',
@@ -25,6 +26,7 @@ class UsersService {
                 'page': page,
                 'size': size,
                 'order_by': orderBy,
+                'username': username,
             },
             errors: {
                 422: `Validation Error`,
@@ -319,6 +321,23 @@ class UsersService {
             url: '/v1/users/me/avatar',
             formData: formData,
             mediaType: 'multipart/form-data',
+            errors: {
+                422: `Validation Error`,
+            },
+        });
+    }
+    /**
+     * Connect Steam Profile
+     * @param requestBody
+     * @returns any Successful Response
+     * @throws ApiError
+     */
+    connectSteamProfile(requestBody) {
+        return this.httpRequest.request({
+            method: 'POST',
+            url: '/v1/users/me/connect/steam',
+            body: requestBody,
+            mediaType: 'application/json',
             errors: {
                 422: `Validation Error`,
             },

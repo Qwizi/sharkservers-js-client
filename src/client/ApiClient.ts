@@ -13,7 +13,6 @@ import { AdminScopesService } from './services/AdminScopesService';
 import { AdminServersService } from './services/AdminServersService';
 import { AdminUsersService } from './services/AdminUsersService';
 import { AuthService } from './services/AuthService';
-import { ChatService } from './services/ChatService';
 import { ForumService } from './services/ForumService';
 import { PlayersService } from './services/PlayersService';
 import { RolesService } from './services/RolesService';
@@ -33,7 +32,6 @@ export class ApiClient {
     public readonly adminServers: AdminServersService;
     public readonly adminUsers: AdminUsersService;
     public readonly auth: AuthService;
-    public readonly chat: ChatService;
     public readonly forum: ForumService;
     public readonly players: PlayersService;
     public readonly roles: RolesService;
@@ -64,7 +62,6 @@ export class ApiClient {
         this.adminServers = new AdminServersService(this.request);
         this.adminUsers = new AdminUsersService(this.request);
         this.auth = new AuthService(this.request);
-        this.chat = new ChatService(this.request);
         this.forum = new ForumService(this.request);
         this.players = new PlayersService(this.request);
         this.roles = new RolesService(this.request);

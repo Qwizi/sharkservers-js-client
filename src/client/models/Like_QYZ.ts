@@ -3,11 +3,12 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export type Ban_ERT = {
+import type { User_GHG } from './User_GHG';
+
+export type Like_QYZ = {
     created_at?: string;
     updated_at?: string;
     id?: number;
-    reason: string;
-    ban_time?: string;
+    author?: User_GHG;
 };
 

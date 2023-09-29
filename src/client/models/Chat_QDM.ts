@@ -3,15 +3,10 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Scope_TEV } from './Scope_TEV';
-
-export type Role_MHE = {
+export type Chat_QDM = {
     created_at?: string;
     updated_at?: string;
     id?: number;
-    name: string;
-    color?: string;
-    scopes?: Array<Scope_TEV>;
-    is_staff?: boolean;
+    message: string;
 };
 

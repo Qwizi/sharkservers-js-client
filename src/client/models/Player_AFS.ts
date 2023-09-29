@@ -3,15 +3,15 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { SteamRepProfile_JNX } from './SteamRepProfile_JNX';
-import type { User_YMC } from './User_YMC';
+import type { SteamRepProfile_ROI } from './SteamRepProfile_ROI';
+import type { User_URI } from './User_URI';
 
-export type Player_FFD = {
+export type Player_AFS = {
     created_at?: string;
     updated_at?: string;
     id?: number;
-    user?: User_YMC;
-    steamrep_profile?: SteamRepProfile_JNX;
+    user?: User_URI;
+    steamrep_profile?: SteamRepProfile_ROI;
     username: string;
     steamid3: string;
     steamid32: string;

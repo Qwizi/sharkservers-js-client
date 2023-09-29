@@ -3,14 +3,16 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { User_BGU } from './User_BGU';
+import type { Like_QYZ } from './Like_QYZ';
+import type { User_GHG } from './User_GHG';
 
-export type PostOut = {
+export type Post_ATI = {
     created_at?: string;
     updated_at?: string;
     id?: number;
-    author?: User_BGU;
+    author?: User_GHG;
     content: string;
+    likes?: Array<Like_QYZ>;
     likes_count?: number;
 };
 

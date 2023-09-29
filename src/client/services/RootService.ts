@@ -69,13 +69,22 @@ export class RootService {
 
     /**
      * Test
+     * @param msg
      * @returns any Successful Response
      * @throws ApiError
      */
-    public test(): CancelablePromise<any> {
+    public test(
+        msg: string,
+    ): CancelablePromise<any> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/test',
+            query: {
+                'msg': msg,
+            },
+            errors: {
+                422: `Validation Error`,
+            },
         });
     }
 

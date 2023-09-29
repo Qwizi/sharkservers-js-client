@@ -3,7 +3,7 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export type Scope_TEV = {
+export type Scope_RBQ = {
     id?: number;
     app_name: string;
     value: string;

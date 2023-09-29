@@ -3,13 +3,15 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { User_AKB } from './User_AKB';
+import type { ChatColorModule_MJK } from './ChatColorModule_MJK';
 
-export type Chat_OCU = {
+export type Server_IPO = {
     created_at?: string;
     updated_at?: string;
     id?: number;
-    author?: User_AKB;
-    message: string;
+    name: string;
+    ip: string;
+    port: number;
+    server_chat_color_module?: Array<ChatColorModule_MJK>;
 };
 

@@ -3,13 +3,12 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export type Category_GMP = {
+export type ThreadMeta_CEX = {
     created_at?: string;
     updated_at?: string;
-    id?: number;
+    id?: string;
     name: string;
+    value?: string;
     description?: string;
-    type?: string;
-    threads_count?: number;
 };
 

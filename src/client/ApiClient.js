@@ -9,7 +9,6 @@ const AdminScopesService_1 = require("./services/AdminScopesService");
 const AdminServersService_1 = require("./services/AdminServersService");
 const AdminUsersService_1 = require("./services/AdminUsersService");
 const AuthService_1 = require("./services/AuthService");
-const ChatService_1 = require("./services/ChatService");
 const ForumService_1 = require("./services/ForumService");
 const PlayersService_1 = require("./services/PlayersService");
 const RolesService_1 = require("./services/RolesService");
@@ -37,7 +36,6 @@ class ApiClient {
         this.adminServers = new AdminServersService_1.AdminServersService(this.request);
         this.adminUsers = new AdminUsersService_1.AdminUsersService(this.request);
         this.auth = new AuthService_1.AuthService(this.request);
-        this.chat = new ChatService_1.ChatService(this.request);
         this.forum = new ForumService_1.ForumService(this.request);
         this.players = new PlayersService_1.PlayersService(this.request);
         this.roles = new RolesService_1.RolesService(this.request);

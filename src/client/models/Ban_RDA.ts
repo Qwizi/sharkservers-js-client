@@ -3,12 +3,11 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export type ThreadMeta_EPL = {
+export type Ban_RDA = {
     created_at?: string;
     updated_at?: string;
-    id?: string;
-    name: string;
-    value?: string;
-    description?: string;
+    id?: number;
+    reason: string;
+    ban_time?: string;
 };
 

@@ -3,15 +3,11 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Scope_GEP } from './Scope_GEP';
-
-export type Role_HFV = {
+export type Ban_ZZL = {
     created_at?: string;
     updated_at?: string;
     id?: number;
-    name: string;
-    color?: string;
-    scopes?: Array<Scope_GEP>;
-    is_staff?: boolean;
+    reason: string;
+    ban_time?: string;
 };
 

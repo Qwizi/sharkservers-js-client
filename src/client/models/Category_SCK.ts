@@ -3,12 +3,13 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export type Server_UNO = {
+export type Category_SCK = {
     created_at?: string;
     updated_at?: string;
     id?: number;
     name: string;
-    ip: string;
-    port: number;
+    description?: string;
+    type?: string;
+    threads_count?: number;
 };
 
