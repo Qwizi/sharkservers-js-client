@@ -1,6 +1,12 @@
-"use strict";
 /* generated using openapi-typescript-codegen -- do no edit */
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-Object.defineProperty(exports, "__esModule", { value: true });
+
+export type Chat_LJP = {
+    created_at?: string;
+    updated_at?: string;
+    id?: number;
+    message: string;
+};
+

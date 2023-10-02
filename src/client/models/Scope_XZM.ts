@@ -3,7 +3,7 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export type Scope_VHE = {
+export type Scope_XZM = {
     id?: number;
     app_name: string;
     value: string;

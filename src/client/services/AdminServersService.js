@@ -12,7 +12,7 @@ class AdminServersService {
      * :param server_data:
      * :return:
      * @param requestBody
-     * @returns Server_IPO Successful Response
+     * @returns ServerOut Successful Response
      * @throws ApiError
      */
     adminCreateServer(requestBody) {

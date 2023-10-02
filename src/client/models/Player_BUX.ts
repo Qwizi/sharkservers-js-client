@@ -3,14 +3,13 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { ChatColorModule_WUK } from './ChatColorModule_WUK';
-import type { SteamRepProfile_HSV } from './SteamRepProfile_HSV';
+import type { SteamRepProfile_EKU } from './SteamRepProfile_EKU';
 
-export type Player_LCL = {
+export type Player_BUX = {
     created_at?: string;
     updated_at?: string;
     id?: number;
-    steamrep_profile?: SteamRepProfile_HSV;
+    steamrep_profile?: SteamRepProfile_EKU;
     username: string;
     steamid3: string;
     steamid32: string;
@@ -19,6 +18,5 @@ export type Player_LCL = {
     avatar?: string;
     country_code: string;
     reputation?: number;
-    player_chat_color_module?: Array<ChatColorModule_WUK>;
 };
 

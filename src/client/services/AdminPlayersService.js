@@ -9,7 +9,7 @@ class AdminPlayersService {
      * Admin Get Steam Profiles
      * @param page
      * @param size
-     * @returns any Successful Response
+     * @returns Page_PlayerOut_ Successful Response
      * @throws ApiError
      */
     adminGetSteamProfiles(page = 1, size = 50) {
@@ -45,7 +45,7 @@ class AdminPlayersService {
     /**
      * Admin Get Steam Profile
      * @param profileId
-     * @returns Player_LCL Successful Response
+     * @returns PlayerOut Successful Response
      * @throws ApiError
      */
     adminGetSteamProfile(profileId) {
@@ -63,7 +63,7 @@ class AdminPlayersService {
     /**
      * Admin Delete Steam Profile
      * @param profileId
-     * @returns Player_LCL Successful Response
+     * @returns PlayerOut Successful Response
      * @throws ApiError
      */
     adminDeleteSteamProfile(profileId) {

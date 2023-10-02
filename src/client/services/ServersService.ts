@@ -3,7 +3,8 @@
 /* tslint:disable */
 /* eslint-disable */
 import type { CreatePlayerChatColorSchema } from '../models/CreatePlayerChatColorSchema';
-import type { Server_IPO } from '../models/Server_IPO';
+import type { Page_ServerOut_ } from '../models/Page_ServerOut_';
+import type { ServerOut } from '../models/ServerOut';
 import type { UpdatePlayerChatColorSchema } from '../models/UpdatePlayerChatColorSchema';
 
 import type { CancelablePromise } from '../core/CancelablePromise';
@@ -21,7 +22,7 @@ export class ServersService {
      * @param port
      * @param page
      * @param size
-     * @returns any Successful Response
+     * @returns Page_ServerOut_ Successful Response
      * @throws ApiError
      */
     public getServers(
@@ -29,7 +30,7 @@ export class ServersService {
         port?: number,
         page: number = 1,
         size: number = 50,
-    ): CancelablePromise<any> {
+    ): CancelablePromise<Page_ServerOut_> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/servers/',
@@ -66,12 +67,12 @@ export class ServersService {
      * :param server_id:
      * :return:
      * @param serverId
-     * @returns Server_IPO Successful Response
+     * @returns ServerOut Successful Response
      * @throws ApiError
      */
     public getServer(
         serverId: number,
-    ): CancelablePromise<Server_IPO> {
+    ): CancelablePromise<ServerOut> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/servers/{server_id}',

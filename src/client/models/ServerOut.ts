@@ -3,11 +3,15 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export type Ban_ZZL = {
+import type { ChatColorModule_PKV } from './ChatColorModule_PKV';
+
+export type ServerOut = {
     created_at?: string;
     updated_at?: string;
     id?: number;
-    reason: string;
-    ban_time?: string;
+    name: string;
+    ip: string;
+    port: number;
+    server_chat_color_module?: Array<ChatColorModule_PKV>;
 };
 

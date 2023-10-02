@@ -3,7 +3,7 @@
 /* tslint:disable */
 /* eslint-disable */
 import type { CreateServerSchema } from '../models/CreateServerSchema';
-import type { Server_IPO } from '../models/Server_IPO';
+import type { ServerOut } from '../models/ServerOut';
 
 import type { CancelablePromise } from '../core/CancelablePromise';
 import type { BaseHttpRequest } from '../core/BaseHttpRequest';
@@ -19,12 +19,12 @@ export class AdminServersService {
      * :param server_data:
      * :return:
      * @param requestBody
-     * @returns Server_IPO Successful Response
+     * @returns ServerOut Successful Response
      * @throws ApiError
      */
     public adminCreateServer(
         requestBody: CreateServerSchema,
-    ): CancelablePromise<Server_IPO> {
+    ): CancelablePromise<ServerOut> {
         return this.httpRequest.request({
             method: 'POST',
             url: '/v1/admin/servers',

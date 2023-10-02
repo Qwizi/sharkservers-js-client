@@ -3,10 +3,10 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Scope_VHE } from './Scope_VHE';
+import type { ServerOut } from './ServerOut';
 
-export type Page_Scope_VHE_ = {
-    items: Array<Scope_VHE>;
+export type Page_ServerOut_ = {
+    items: Array<ServerOut>;
     total: number;
     page?: number;
     size?: number;

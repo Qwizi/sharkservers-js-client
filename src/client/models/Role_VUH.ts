@@ -3,11 +3,15 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export type Ban_RDA = {
+import type { Scope_XZM } from './Scope_XZM';
+
+export type Role_VUH = {
     created_at?: string;
     updated_at?: string;
     id?: number;
-    reason: string;
-    ban_time?: string;
+    name: string;
+    color?: string;
+    scopes?: Array<Scope_XZM>;
+    is_staff?: boolean;
 };
 

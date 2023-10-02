@@ -13,7 +13,7 @@ class ServersService {
      * @param port
      * @param page
      * @param size
-     * @returns any Successful Response
+     * @returns Page_ServerOut_ Successful Response
      * @throws ApiError
      */
     getServers(ip, port, page = 1, size = 50) {
@@ -51,7 +51,7 @@ class ServersService {
      * :param server_id:
      * :return:
      * @param serverId
-     * @returns Server_IPO Successful Response
+     * @returns ServerOut Successful Response
      * @throws ApiError
      */
     getServer(serverId) {

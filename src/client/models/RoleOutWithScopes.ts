@@ -3,7 +3,7 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Scope_RBQ } from './Scope_RBQ';
+import type { Scope_XZM } from './Scope_XZM';
 
 export type RoleOutWithScopes = {
     created_at?: string;
@@ -11,7 +11,7 @@ export type RoleOutWithScopes = {
     id?: number;
     name: string;
     color?: string;
-    scopes?: Array<Scope_RBQ>;
+    scopes?: Array<Scope_XZM>;
     is_staff?: boolean;
 };
 

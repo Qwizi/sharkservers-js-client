@@ -19,6 +19,7 @@ import { RolesService } from './services/RolesService';
 import { RootService } from './services/RootService';
 import { ScopesService } from './services/ScopesService';
 import { ServersService } from './services/ServersService';
+import { SubscryptionService } from './services/SubscryptionService';
 import { UsersService } from './services/UsersService';
 
 type HttpRequestConstructor = new (config: OpenAPIConfig) => BaseHttpRequest;
@@ -38,6 +39,7 @@ export class ApiClient {
     public readonly root: RootService;
     public readonly scopes: ScopesService;
     public readonly servers: ServersService;
+    public readonly subscryption: SubscryptionService;
     public readonly users: UsersService;
 
     public readonly request: BaseHttpRequest;
@@ -45,7 +47,7 @@ export class ApiClient {
     constructor(config?: Partial<OpenAPIConfig>, HttpRequest: HttpRequestConstructor = AxiosHttpRequest) {
         this.request = new HttpRequest({
             BASE: config?.BASE ?? '',
-            VERSION: config?.VERSION ?? '1.0.6',
+            VERSION: config?.VERSION ?? '1.0.8',
             WITH_CREDENTIALS: config?.WITH_CREDENTIALS ?? false,
             CREDENTIALS: config?.CREDENTIALS ?? 'include',
             TOKEN: config?.TOKEN,
@@ -68,6 +70,7 @@ export class ApiClient {
         this.root = new RootService(this.request);
         this.scopes = new ScopesService(this.request);
         this.servers = new ServersService(this.request);
+        this.subscryption = new SubscryptionService(this.request);
         this.users = new UsersService(this.request);
     }
 }

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UsersService = exports.ServersService = exports.ScopesService = exports.RootService = exports.RolesService = exports.PlayersService = exports.ForumService = exports.AuthService = exports.AdminUsersService = exports.AdminServersService = exports.AdminScopesService = exports.AdminRolesService = exports.AdminPlayersService = exports.AdminForumService = exports.ThreadActionEnum = exports.CategoryTypeEnum = exports.OpenAPI = exports.CancelError = exports.CancelablePromise = exports.BaseHttpRequest = exports.ApiError = exports.ApiClient = void 0;
+exports.UsersService = exports.SubscryptionService = exports.ServersService = exports.ScopesService = exports.RootService = exports.RolesService = exports.PlayersService = exports.ForumService = exports.AuthService = exports.AdminUsersService = exports.AdminServersService = exports.AdminScopesService = exports.AdminRolesService = exports.AdminPlayersService = exports.AdminForumService = exports.ThreadActionEnum = exports.CategoryTypeEnum = exports.OpenAPI = exports.CancelError = exports.CancelablePromise = exports.BaseHttpRequest = exports.ApiError = exports.ApiClient = void 0;
 /* generated using openapi-typescript-codegen -- do no edit */
 /* istanbul ignore file */
 /* tslint:disable */
@@ -46,5 +46,7 @@ var ScopesService_1 = require("./services/ScopesService");
 Object.defineProperty(exports, "ScopesService", { enumerable: true, get: function () { return ScopesService_1.ScopesService; } });
 var ServersService_1 = require("./services/ServersService");
 Object.defineProperty(exports, "ServersService", { enumerable: true, get: function () { return ServersService_1.ServersService; } });
+var SubscryptionService_1 = require("./services/SubscryptionService");
+Object.defineProperty(exports, "SubscryptionService", { enumerable: true, get: function () { return SubscryptionService_1.SubscryptionService; } });
 var UsersService_1 = require("./services/UsersService");
 Object.defineProperty(exports, "UsersService", { enumerable: true, get: function () { return UsersService_1.UsersService; } });

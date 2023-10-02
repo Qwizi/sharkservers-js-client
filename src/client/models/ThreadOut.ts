@@ -3,10 +3,10 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Category_SCK } from './Category_SCK';
-import type { Server_QIG } from './Server_QIG';
-import type { ThreadMeta_CEX } from './ThreadMeta_CEX';
-import type { User_BGU } from './User_BGU';
+import type { Category_NDC } from './Category_NDC';
+import type { Server_ACD } from './Server_ACD';
+import type { ThreadMeta_OUI } from './ThreadMeta_OUI';
+import type { User_UPR } from './User_UPR';
 
 export type ThreadOut = {
     created_at?: string;
@@ -17,10 +17,10 @@ export type ThreadOut = {
     is_closed?: boolean;
     is_pinned?: boolean;
     status?: string;
-    category?: Category_SCK;
-    author?: User_BGU;
-    meta_fields?: Array<ThreadMeta_CEX>;
+    category?: Category_NDC;
+    author?: User_UPR;
+    meta_fields?: Array<ThreadMeta_OUI>;
     post_count?: number;
-    server?: Server_QIG;
+    server?: Server_ACD;
 };
 

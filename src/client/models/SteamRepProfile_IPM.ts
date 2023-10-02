@@ -3,7 +3,7 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export type SteamRepProfile_ROI = {
+export type SteamRepProfile_IPM = {
     created_at?: string;
     updated_at?: string;
     id?: number;

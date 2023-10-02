@@ -3,12 +3,12 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { User_BGU } from './User_BGU';
+import type { User_UPR } from './User_UPR';
 
 export type LikeOut = {
     created_at?: string;
     updated_at?: string;
     id?: number;
-    author?: User_BGU;
+    author?: User_UPR;
 };
 

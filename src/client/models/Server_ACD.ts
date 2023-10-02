@@ -3,10 +3,12 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export type Chat_QDM = {
+export type Server_ACD = {
     created_at?: string;
     updated_at?: string;
     id?: number;
-    message: string;
+    name: string;
+    ip: string;
+    port: number;
 };
 

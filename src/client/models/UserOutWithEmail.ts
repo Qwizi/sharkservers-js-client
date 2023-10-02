@@ -3,9 +3,10 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Ban_RDA } from './Ban_RDA';
-import type { Chat_QDM } from './Chat_QDM';
-import type { Role_YMM } from './Role_YMM';
+import type { Ban_LVV } from './Ban_LVV';
+import type { Chat_LJP } from './Chat_LJP';
+import type { Player_BUX } from './Player_BUX';
+import type { Role_VUH } from './Role_VUH';
 
 export type UserOutWithEmail = {
     created_at?: string;
@@ -16,15 +17,16 @@ export type UserOutWithEmail = {
     is_activated?: boolean;
     is_superuser?: boolean;
     avatar?: string;
-    roles?: Array<Role_YMM>;
-    display_role?: Role_YMM;
+    roles?: Array<Role_VUH>;
+    display_role?: Role_VUH;
     last_login?: string;
     last_online?: string;
     threads_count?: number;
     posts_count?: number;
     likes_count?: number;
-    banned_user?: Array<Ban_RDA>;
-    banned_by?: Array<Ban_RDA>;
-    chats?: Array<Chat_QDM>;
+    player?: Player_BUX;
+    banned_user?: Array<Ban_LVV>;
+    banned_by?: Array<Ban_LVV>;
+    chats?: Array<Chat_LJP>;
 };
 

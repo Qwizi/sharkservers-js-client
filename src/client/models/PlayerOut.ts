@@ -3,15 +3,13 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { SteamRepProfile_ROI } from './SteamRepProfile_ROI';
-import type { User_URI } from './User_URI';
+import type { SteamRepProfile_EKU } from './SteamRepProfile_EKU';
 
-export type Player_AFS = {
+export type PlayerOut = {
     created_at?: string;
     updated_at?: string;
     id?: number;
-    user?: User_URI;
-    steamrep_profile?: SteamRepProfile_ROI;
+    steamrep_profile?: SteamRepProfile_EKU;
     username: string;
     steamid3: string;
     steamid32: string;

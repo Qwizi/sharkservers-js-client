@@ -3,15 +3,12 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Scope_RBQ } from './Scope_RBQ';
-
-export type Role_YMM = {
+export type SteamRepProfile_EKU = {
     created_at?: string;
     updated_at?: string;
     id?: number;
-    name: string;
-    color?: string;
-    scopes?: Array<Scope_RBQ>;
-    is_staff?: boolean;
+    profile_url: string;
+    is_scammer?: boolean;
+    steamid64: string;
 };
 

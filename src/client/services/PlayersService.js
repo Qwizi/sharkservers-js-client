@@ -9,7 +9,7 @@ class PlayersService {
      * Get Players
      * @param page
      * @param size
-     * @returns any Successful Response
+     * @returns Page_PlayerOut_ Successful Response
      * @throws ApiError
      */
     getPlayers(page = 1, size = 50) {

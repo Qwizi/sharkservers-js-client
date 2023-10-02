@@ -15,12 +15,13 @@ const RolesService_1 = require("./services/RolesService");
 const RootService_1 = require("./services/RootService");
 const ScopesService_1 = require("./services/ScopesService");
 const ServersService_1 = require("./services/ServersService");
+const SubscryptionService_1 = require("./services/SubscryptionService");
 const UsersService_1 = require("./services/UsersService");
 class ApiClient {
     constructor(config, HttpRequest = AxiosHttpRequest_1.AxiosHttpRequest) {
         this.request = new HttpRequest({
             BASE: config?.BASE ?? '',
-            VERSION: config?.VERSION ?? '1.0.6',
+            VERSION: config?.VERSION ?? '1.0.8',
             WITH_CREDENTIALS: config?.WITH_CREDENTIALS ?? false,
             CREDENTIALS: config?.CREDENTIALS ?? 'include',
             TOKEN: config?.TOKEN,
@@ -42,6 +43,7 @@ class ApiClient {
         this.root = new RootService_1.RootService(this.request);
         this.scopes = new ScopesService_1.ScopesService(this.request);
         this.servers = new ServersService_1.ServersService(this.request);
+        this.subscryption = new SubscryptionService_1.SubscryptionService(this.request);
         this.users = new UsersService_1.UsersService(this.request);
     }
 }

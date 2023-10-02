@@ -3,13 +3,13 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Server_JYL } from './Server_JYL';
+import type { Player_GBM } from './Player_GBM';
 
-export type ChatColorModule_WUK = {
+export type ChatColorModule_PKV = {
     created_at?: string;
     updated_at?: string;
     id?: number;
-    server?: Server_JYL;
+    player?: Player_GBM;
     tag: string;
     flag: string;
     tag_color: string;

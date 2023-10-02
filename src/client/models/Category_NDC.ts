@@ -3,12 +3,13 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export type ThreadMeta_CEX = {
+export type Category_NDC = {
     created_at?: string;
     updated_at?: string;
-    id?: string;
+    id?: number;
     name: string;
-    value?: string;
     description?: string;
+    type?: string;
+    threads_count?: number;
 };
 

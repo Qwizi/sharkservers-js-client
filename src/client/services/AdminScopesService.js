@@ -14,7 +14,7 @@ class AdminScopesService {
      * :return:
      * @param page
      * @param size
-     * @returns Page_Scope_VHE_ Successful Response
+     * @returns Page_Scope_FVE_ Successful Response
      * @throws ApiError
      */
     adminGetScopes(page = 1, size = 50) {
@@ -37,7 +37,7 @@ class AdminScopesService {
      * :param admin_user:
      * :return:
      * @param requestBody
-     * @returns Scope_VHE Successful Response
+     * @returns Scope_FVE Successful Response
      * @throws ApiError
      */
     adminCreateScope(requestBody) {
@@ -54,7 +54,7 @@ class AdminScopesService {
     /**
      * Admin Get Scope
      * @param scopeId
-     * @returns Scope_VHE Successful Response
+     * @returns Scope_FVE Successful Response
      * @throws ApiError
      */
     adminGetScope(scopeId) {
@@ -79,7 +79,7 @@ class AdminScopesService {
      * :return:
      * @param scopeId
      * @param requestBody
-     * @returns Scope_VHE Successful Response
+     * @returns Scope_FVE Successful Response
      * @throws ApiError
      */
     adminUpdateScope(scopeId, requestBody) {
@@ -103,7 +103,7 @@ class AdminScopesService {
      * :param admin_user:
      * :return:
      * @param scopeId
-     * @returns Scope_VHE Successful Response
+     * @returns Scope_FVE Successful Response
      * @throws ApiError
      */
     adminDeleteScope(scopeId) {

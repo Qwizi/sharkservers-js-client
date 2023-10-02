@@ -3,8 +3,9 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { Chat_QDM } from './Chat_QDM';
-import type { Role_VLE } from './Role_VLE';
+import type { Chat_LJP } from './Chat_LJP';
+import type { Player_BUX } from './Player_BUX';
+import type { Role_SKK } from './Role_SKK';
 
 export type UserOut = {
     created_at?: string;
@@ -14,12 +15,13 @@ export type UserOut = {
     is_activated?: boolean;
     is_superuser?: boolean;
     avatar?: string;
-    display_role?: Role_VLE;
+    display_role?: Role_SKK;
     last_login?: string;
     last_online?: string;
     threads_count?: number;
     posts_count?: number;
     likes_count?: number;
-    chats?: Array<Chat_QDM>;
+    player?: Player_BUX;
+    chats?: Array<Chat_LJP>;
 };
 

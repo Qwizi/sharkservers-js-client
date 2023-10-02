@@ -3,12 +3,12 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { User_GHG } from './User_GHG';
-
-export type Like_QYZ = {
+export type ThreadMeta_OUI = {
     created_at?: string;
     updated_at?: string;
-    id?: number;
-    author?: User_GHG;
+    id?: string;
+    name: string;
+    value?: string;
+    description?: string;
 };
 
