@@ -3,11 +3,14 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { ThreadAuthor } from './ThreadAuthor';
+import type { User_EJU } from './User_EJU';
 
 export type PostOut = {
-    id: number;
+    created_at?: string;
+    updated_at?: string;
+    id?: number;
+    author?: User_EJU;
     content: string;
-    author: ThreadAuthor;
+    likes_count?: number;
 };
 

@@ -4,9 +4,9 @@
 /* eslint-disable */
 
 export type RegisterUserSchema = {
-    username?: string;
-    email: string;
     password: string;
     password2: string;
+    username?: string;
+    email: string;
 };
 

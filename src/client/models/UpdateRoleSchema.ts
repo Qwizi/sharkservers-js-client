@@ -4,6 +4,7 @@
 /* eslint-disable */
 
 export type UpdateRoleSchema = {
+    tag?: string;
     name?: string;
     color?: string;
     is_staff?: boolean;

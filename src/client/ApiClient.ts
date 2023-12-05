@@ -11,16 +11,19 @@ import { AdminPlayersService } from './services/AdminPlayersService';
 import { AdminRolesService } from './services/AdminRolesService';
 import { AdminScopesService } from './services/AdminScopesService';
 import { AdminServersService } from './services/AdminServersService';
+import { AdminServersAdminGroupsService } from './services/AdminServersAdminGroupsService';
+import { AdminServersAdminsService } from './services/AdminServersAdminsService';
 import { AdminUsersService } from './services/AdminUsersService';
 import { AuthService } from './services/AuthService';
-import { ChatService } from './services/ChatService';
 import { ForumService } from './services/ForumService';
 import { PlayersService } from './services/PlayersService';
 import { RolesService } from './services/RolesService';
 import { RootService } from './services/RootService';
 import { ScopesService } from './services/ScopesService';
 import { ServersService } from './services/ServersService';
+import { SubscryptionService } from './services/SubscryptionService';
 import { UsersService } from './services/UsersService';
+import { UsersMeService } from './services/UsersMeService';
 
 type HttpRequestConstructor = new (config: OpenAPIConfig) => BaseHttpRequest;
 
@@ -31,23 +34,26 @@ export class ApiClient {
     public readonly adminRoles: AdminRolesService;
     public readonly adminScopes: AdminScopesService;
     public readonly adminServers: AdminServersService;
+    public readonly adminServersAdminGroups: AdminServersAdminGroupsService;
+    public readonly adminServersAdmins: AdminServersAdminsService;
     public readonly adminUsers: AdminUsersService;
     public readonly auth: AuthService;
-    public readonly chat: ChatService;
     public readonly forum: ForumService;
     public readonly players: PlayersService;
     public readonly roles: RolesService;
     public readonly root: RootService;
     public readonly scopes: ScopesService;
     public readonly servers: ServersService;
+    public readonly subscryption: SubscryptionService;
     public readonly users: UsersService;
+    public readonly usersMe: UsersMeService;
 
     public readonly request: BaseHttpRequest;
 
     constructor(config?: Partial<OpenAPIConfig>, HttpRequest: HttpRequestConstructor = AxiosHttpRequest) {
         this.request = new HttpRequest({
             BASE: config?.BASE ?? '',
-            VERSION: config?.VERSION ?? '1.0.1',
+            VERSION: config?.VERSION ?? '1.1.0',
             WITH_CREDENTIALS: config?.WITH_CREDENTIALS ?? false,
             CREDENTIALS: config?.CREDENTIALS ?? 'include',
             TOKEN: config?.TOKEN,
@@ -62,16 +68,19 @@ export class ApiClient {
         this.adminRoles = new AdminRolesService(this.request);
         this.adminScopes = new AdminScopesService(this.request);
         this.adminServers = new AdminServersService(this.request);
+        this.adminServersAdminGroups = new AdminServersAdminGroupsService(this.request);
+        this.adminServersAdmins = new AdminServersAdminsService(this.request);
         this.adminUsers = new AdminUsersService(this.request);
         this.auth = new AuthService(this.request);
-        this.chat = new ChatService(this.request);
         this.forum = new ForumService(this.request);
         this.players = new PlayersService(this.request);
         this.roles = new RolesService(this.request);
         this.root = new RootService(this.request);
         this.scopes = new ScopesService(this.request);
         this.servers = new ServersService(this.request);
+        this.subscryption = new SubscryptionService(this.request);
         this.users = new UsersService(this.request);
+        this.usersMe = new UsersMeService(this.request);
     }
 }
 

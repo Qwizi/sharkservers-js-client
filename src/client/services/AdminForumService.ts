@@ -3,9 +3,12 @@
 /* tslint:disable */
 /* eslint-disable */
 import type { AdminCreatePostSchema } from '../models/AdminCreatePostSchema';
+import type { AdminThreadActionSchema } from '../models/AdminThreadActionSchema';
 import type { AdminUpdatePostSchema } from '../models/AdminUpdatePostSchema';
 import type { AdminUpdateThreadSchema } from '../models/AdminUpdateThreadSchema';
+import type { CategoryOut } from '../models/CategoryOut';
 import type { CreateCategorySchema } from '../models/CreateCategorySchema';
+import type { Page_CategoryOut_ } from '../models/Page_CategoryOut_';
 
 import type { CancelablePromise } from '../core/CancelablePromise';
 import type { BaseHttpRequest } from '../core/BaseHttpRequest';
@@ -13,6 +16,34 @@ import type { BaseHttpRequest } from '../core/BaseHttpRequest';
 export class AdminForumService {
 
     constructor(public readonly httpRequest: BaseHttpRequest) {}
+
+    /**
+     * Admin Get Categories
+     * Get all categories.
+     * :param categories_service:
+     * :param params:
+     * :return:
+     * @param page
+     * @param size
+     * @returns Page_CategoryOut_ Successful Response
+     * @throws ApiError
+     */
+    public adminGetCategories(
+        page: number = 1,
+        size: number = 50,
+    ): CancelablePromise<Page_CategoryOut_> {
+        return this.httpRequest.request({
+            method: 'GET',
+            url: '/v1/admin/forum/categories',
+            query: {
+                'page': page,
+                'size': size,
+            },
+            errors: {
+                422: `Validation Error`,
+            },
+        });
+    }
 
     /**
      * Admin Create Category
@@ -32,6 +63,30 @@ export class AdminForumService {
             url: '/v1/admin/forum/categories',
             body: requestBody,
             mediaType: 'application/json',
+            errors: {
+                422: `Validation Error`,
+            },
+        });
+    }
+
+    /**
+     * Admin Get Category
+     * Get category
+     * :param category:
+     * :return:
+     * @param categoryId
+     * @returns CategoryOut Successful Response
+     * @throws ApiError
+     */
+    public adminGetCategory(
+        categoryId: number,
+    ): CancelablePromise<CategoryOut> {
+        return this.httpRequest.request({
+            method: 'GET',
+            url: '/v1/admin/forum/categories/{category_id}',
+            path: {
+                'category_id': categoryId,
+            },
             errors: {
                 422: `Validation Error`,
             },
@@ -146,6 +201,33 @@ export class AdminForumService {
             path: {
                 'thread_id': threadId,
             },
+            errors: {
+                422: `Validation Error`,
+            },
+        });
+    }
+
+    /**
+     * Run Thread Action
+     * Run thread action
+     * :return:
+     * @param threadId
+     * @param requestBody
+     * @returns any Successful Response
+     * @throws ApiError
+     */
+    public runThreadAction(
+        threadId: number,
+        requestBody: AdminThreadActionSchema,
+    ): CancelablePromise<any> {
+        return this.httpRequest.request({
+            method: 'POST',
+            url: '/v1/admin/forum/threads/{thread_id}/action',
+            path: {
+                'thread_id': threadId,
+            },
+            body: requestBody,
+            mediaType: 'application/json',
             errors: {
                 422: `Validation Error`,
             },

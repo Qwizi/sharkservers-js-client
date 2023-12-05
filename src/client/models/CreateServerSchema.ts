@@ -4,8 +4,10 @@
 /* eslint-disable */
 
 export type CreateServerSchema = {
+    tag: string;
     name: string;
     ip: string;
     port: number;
+    api_url: string;
 };
 
