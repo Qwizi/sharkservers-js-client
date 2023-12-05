@@ -55,16 +55,4 @@ export class RootService {
         });
     }
 
-    /**
-     * Protected Route
-     * @returns any Successful Response
-     * @throws ApiError
-     */
-    public protectedRoute(): CancelablePromise<any> {
-        return this.httpRequest.request({
-            method: 'GET',
-            url: '/protected',
-        });
-    }
-
 }

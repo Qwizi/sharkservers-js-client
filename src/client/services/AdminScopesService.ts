@@ -3,8 +3,8 @@
 /* tslint:disable */
 /* eslint-disable */
 import type { CreateScopeSchema } from '../models/CreateScopeSchema';
-import type { Page_Scope_JFC_ } from '../models/Page_Scope_JFC_';
-import type { Scope_JFC } from '../models/Scope_JFC';
+import type { Page_Scope_YVN_ } from '../models/Page_Scope_YVN_';
+import type { Scope_YVN } from '../models/Scope_YVN';
 import type { UpdateScopeSchema } from '../models/UpdateScopeSchema';
 
 import type { CancelablePromise } from '../core/CancelablePromise';
@@ -23,13 +23,13 @@ export class AdminScopesService {
      * :return:
      * @param page
      * @param size
-     * @returns Page_Scope_JFC_ Successful Response
+     * @returns Page_Scope_YVN_ Successful Response
      * @throws ApiError
      */
     public adminGetScopes(
         page: number = 1,
         size: number = 50,
-    ): CancelablePromise<Page_Scope_JFC_> {
+    ): CancelablePromise<Page_Scope_YVN_> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/admin/scopes',
@@ -50,12 +50,12 @@ export class AdminScopesService {
      * :param admin_user:
      * :return:
      * @param requestBody
-     * @returns Scope_JFC Successful Response
+     * @returns Scope_YVN Successful Response
      * @throws ApiError
      */
     public adminCreateScope(
         requestBody: CreateScopeSchema,
-    ): CancelablePromise<Scope_JFC> {
+    ): CancelablePromise<Scope_YVN> {
         return this.httpRequest.request({
             method: 'POST',
             url: '/v1/admin/scopes',
@@ -70,12 +70,12 @@ export class AdminScopesService {
     /**
      * Admin Get Scope
      * @param scopeId
-     * @returns Scope_JFC Successful Response
+     * @returns Scope_YVN Successful Response
      * @throws ApiError
      */
     public adminGetScope(
         scopeId: number,
-    ): CancelablePromise<Scope_JFC> {
+    ): CancelablePromise<Scope_YVN> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/admin/scopes/{scope_id}',
@@ -98,13 +98,13 @@ export class AdminScopesService {
      * :return:
      * @param scopeId
      * @param requestBody
-     * @returns Scope_JFC Successful Response
+     * @returns Scope_YVN Successful Response
      * @throws ApiError
      */
     public adminUpdateScope(
         scopeId: number,
         requestBody: UpdateScopeSchema,
-    ): CancelablePromise<Scope_JFC> {
+    ): CancelablePromise<Scope_YVN> {
         return this.httpRequest.request({
             method: 'PUT',
             url: '/v1/admin/scopes/{scope_id}',
@@ -126,12 +126,12 @@ export class AdminScopesService {
      * :param admin_user:
      * :return:
      * @param scopeId
-     * @returns Scope_JFC Successful Response
+     * @returns Scope_YVN Successful Response
      * @throws ApiError
      */
     public adminDeleteScope(
         scopeId: number,
-    ): CancelablePromise<Scope_JFC> {
+    ): CancelablePromise<Scope_YVN> {
         return this.httpRequest.request({
             method: 'DELETE',
             url: '/v1/admin/scopes/{scope_id}',

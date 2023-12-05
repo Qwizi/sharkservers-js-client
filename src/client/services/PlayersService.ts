@@ -3,6 +3,7 @@
 /* tslint:disable */
 /* eslint-disable */
 import type { CreatePlayerSchema } from '../models/CreatePlayerSchema';
+import type { Page_PlayerOut_ } from '../models/Page_PlayerOut_';
 
 import type { CancelablePromise } from '../core/CancelablePromise';
 import type { BaseHttpRequest } from '../core/BaseHttpRequest';
@@ -15,13 +16,13 @@ export class PlayersService {
      * Get Players
      * @param page
      * @param size
-     * @returns any Successful Response
+     * @returns Page_PlayerOut_ Successful Response
      * @throws ApiError
      */
     public getPlayers(
         page: number = 1,
         size: number = 50,
-    ): CancelablePromise<any> {
+    ): CancelablePromise<Page_PlayerOut_> {
         return this.httpRequest.request({
             method: 'GET',
             url: '/v1/players',

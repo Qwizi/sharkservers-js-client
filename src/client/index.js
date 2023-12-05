@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UsersService = exports.ServersService = exports.ScopesService = exports.RootService = exports.RolesService = exports.PlayersService = exports.ForumService = exports.ChatService = exports.AuthService = exports.AdminUsersService = exports.AdminServersService = exports.AdminScopesService = exports.AdminRolesService = exports.AdminPlayersService = exports.AdminForumService = exports.CategoryTypeEnum = exports.OpenAPI = exports.CancelError = exports.CancelablePromise = exports.BaseHttpRequest = exports.ApiError = exports.ApiClient = void 0;
+exports.UsersMeService = exports.UsersService = exports.SubscryptionService = exports.ServersService = exports.ScopesService = exports.RootService = exports.RolesService = exports.PlayersService = exports.ForumService = exports.AuthService = exports.AdminUsersService = exports.AdminServersAdminsService = exports.AdminServersAdminGroupsService = exports.AdminServersService = exports.AdminScopesService = exports.AdminRolesService = exports.AdminPlayersService = exports.AdminForumService = exports.ThreadActionEnum = exports.CategoryTypeEnum = exports.AuthTypeEnum = exports.OpenAPI = exports.CancelError = exports.CancelablePromise = exports.BaseHttpRequest = exports.ApiError = exports.ApiClient = void 0;
 /* generated using openapi-typescript-codegen -- do no edit */
 /* istanbul ignore file */
 /* tslint:disable */
@@ -16,8 +16,12 @@ Object.defineProperty(exports, "CancelablePromise", { enumerable: true, get: fun
 Object.defineProperty(exports, "CancelError", { enumerable: true, get: function () { return CancelablePromise_1.CancelError; } });
 var OpenAPI_1 = require("./core/OpenAPI");
 Object.defineProperty(exports, "OpenAPI", { enumerable: true, get: function () { return OpenAPI_1.OpenAPI; } });
+var AuthTypeEnum_1 = require("./models/AuthTypeEnum");
+Object.defineProperty(exports, "AuthTypeEnum", { enumerable: true, get: function () { return AuthTypeEnum_1.AuthTypeEnum; } });
 var CategoryTypeEnum_1 = require("./models/CategoryTypeEnum");
 Object.defineProperty(exports, "CategoryTypeEnum", { enumerable: true, get: function () { return CategoryTypeEnum_1.CategoryTypeEnum; } });
+var ThreadActionEnum_1 = require("./models/ThreadActionEnum");
+Object.defineProperty(exports, "ThreadActionEnum", { enumerable: true, get: function () { return ThreadActionEnum_1.ThreadActionEnum; } });
 var AdminForumService_1 = require("./services/AdminForumService");
 Object.defineProperty(exports, "AdminForumService", { enumerable: true, get: function () { return AdminForumService_1.AdminForumService; } });
 var AdminPlayersService_1 = require("./services/AdminPlayersService");
@@ -28,12 +32,14 @@ var AdminScopesService_1 = require("./services/AdminScopesService");
 Object.defineProperty(exports, "AdminScopesService", { enumerable: true, get: function () { return AdminScopesService_1.AdminScopesService; } });
 var AdminServersService_1 = require("./services/AdminServersService");
 Object.defineProperty(exports, "AdminServersService", { enumerable: true, get: function () { return AdminServersService_1.AdminServersService; } });
+var AdminServersAdminGroupsService_1 = require("./services/AdminServersAdminGroupsService");
+Object.defineProperty(exports, "AdminServersAdminGroupsService", { enumerable: true, get: function () { return AdminServersAdminGroupsService_1.AdminServersAdminGroupsService; } });
+var AdminServersAdminsService_1 = require("./services/AdminServersAdminsService");
+Object.defineProperty(exports, "AdminServersAdminsService", { enumerable: true, get: function () { return AdminServersAdminsService_1.AdminServersAdminsService; } });
 var AdminUsersService_1 = require("./services/AdminUsersService");
 Object.defineProperty(exports, "AdminUsersService", { enumerable: true, get: function () { return AdminUsersService_1.AdminUsersService; } });
 var AuthService_1 = require("./services/AuthService");
 Object.defineProperty(exports, "AuthService", { enumerable: true, get: function () { return AuthService_1.AuthService; } });
-var ChatService_1 = require("./services/ChatService");
-Object.defineProperty(exports, "ChatService", { enumerable: true, get: function () { return ChatService_1.ChatService; } });
 var ForumService_1 = require("./services/ForumService");
 Object.defineProperty(exports, "ForumService", { enumerable: true, get: function () { return ForumService_1.ForumService; } });
 var PlayersService_1 = require("./services/PlayersService");
@@ -46,5 +52,9 @@ var ScopesService_1 = require("./services/ScopesService");
 Object.defineProperty(exports, "ScopesService", { enumerable: true, get: function () { return ScopesService_1.ScopesService; } });
 var ServersService_1 = require("./services/ServersService");
 Object.defineProperty(exports, "ServersService", { enumerable: true, get: function () { return ServersService_1.ServersService; } });
+var SubscryptionService_1 = require("./services/SubscryptionService");
+Object.defineProperty(exports, "SubscryptionService", { enumerable: true, get: function () { return SubscryptionService_1.SubscryptionService; } });
 var UsersService_1 = require("./services/UsersService");
 Object.defineProperty(exports, "UsersService", { enumerable: true, get: function () { return UsersService_1.UsersService; } });
+var UsersMeService_1 = require("./services/UsersMeService");
+Object.defineProperty(exports, "UsersMeService", { enumerable: true, get: function () { return UsersMeService_1.UsersMeService; } });

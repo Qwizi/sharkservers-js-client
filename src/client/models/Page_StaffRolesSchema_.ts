@@ -7,7 +7,7 @@ import type { StaffRolesSchema } from './StaffRolesSchema';
 
 export type Page_StaffRolesSchema_ = {
     items: Array<StaffRolesSchema>;
-    total: number;
+    total?: number;
     page?: number;
     size?: number;
     pages?: number;
